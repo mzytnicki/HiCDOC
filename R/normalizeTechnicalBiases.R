@@ -127,7 +127,7 @@ normalizeTechnicalBiases <- function(object, parallel = TRUE) {
             A.min = 0
         )
     normalized <-
-        multiHiCcompare::cyclic_loess(experiment, parallel = parallel)
+        multiHiCcompare::fastlo(experiment, span = NA, parallel = parallel)
 
     result <-
         multiHiCcompare::hic_table(normalized) %>%
