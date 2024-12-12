@@ -14,7 +14,7 @@
 #' @importFrom pbapply pbmapply
 #' @importFrom BiocParallel bpparam bpmapply bplapply
 #' @importFrom BiocGenerics cbind width
-#' @importFrom cowplot ggdraw get_legend
+#' @importFrom cowplot ggdraw get_plot_component
 #' @importFrom grid textGrob gpar
 #' @importFrom gridExtra arrangeGrob
 #' @importFrom multiHiCcompare make_hicexp cyclic_loess hic_table

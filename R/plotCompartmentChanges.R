@@ -101,8 +101,8 @@ plotCompartmentChanges <- function(
         messages <- paste0("Quality controls:\n", messages)
         legendsGrob <- gridExtra::arrangeGrob(
             gridExtra::arrangeGrob(
-                cowplot::get_legend(compartmentsPlot),
-                cowplot::get_legend(concordancesPlot),
+                cowplot::get_plot_component(compartmentsPlot, 'guide-box-bottom', return_all = TRUE),
+                cowplot::get_plot_component(concordancesPlot, 'guide-box-bottom', return_all = TRUE),
                 ncol = 1,
                 nrow = 2
             ),
@@ -115,8 +115,8 @@ plotCompartmentChanges <- function(
         )
     } else {
         legendsGrob <- gridExtra::arrangeGrob(
-            cowplot::get_legend(compartmentsPlot),
-            cowplot::get_legend(concordancesPlot),
+            cowplot::get_plot_component(compartmentsPlot, 'guide-box-bottom', return_all = TRUE),
+            cowplot::get_plot_component(concordancesPlot, 'guide-box-bottom', return_all = TRUE),
             ncol = 2,
             nrow = 1,
             padding = unit(1, "cm")

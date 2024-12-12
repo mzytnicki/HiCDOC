@@ -84,7 +84,7 @@ plotDistanceEffect <- function(object, chromosome = NULL, transformX="identity",
     plot <- gridExtra::arrangeGrob(
                 margPlot,
                 plot + theme(legend.position = "none"),
-                cowplot::get_legend(plot),
+                cowplot::get_plot_component(plot, 'guide-box-right', return_all = TRUE),
                 layout_matrix = layoutMatrix,
                 padding = unit(0.2, "lines"),
                 top = paste0("Distance effect", addTitle)
