@@ -2,7 +2,6 @@
 #' A/B compartment detection and differential analysis
 #' @docType package
 #' @import methods
-#' @import zlibbioc
 #' @import ggplot2
 #' @import InteractionSet
 #' @importFrom GenomicRanges start end distance GRanges match union

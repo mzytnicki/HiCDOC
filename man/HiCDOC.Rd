@@ -21,42 +21,31 @@ Runs the default filtering, normalization, and computational steps on a
 }
 \details{
 \subsection{\code{HiCDOC} pipeline}{
-    The HiCDOC pipeline has seven steps:
+    The HiCDOC pipeline has seven steps: \\
     \describe{
-        \item{Three filtering steps:}{
-            \itemize{
-                \item{\code{\link{filterSmallChromosomes}}}{
-                    to filter out small chromosomes
-                }
-                \item{\code{\link{filterWeakPositions}}}{
-                    to filter out weak positions with very few interactions
-                }
-                \item{\code{\link{filterSparseReplicates}}}{
-                    to filter out sparse replicates with many null
-                    interactions
-                }
-            }
+        Three filtering steps:
+        \itemize{
+            \item{\code{\link{filterSmallChromosomes}}} to filter out 
+            small chromosomes
+            \item{\code{\link{filterWeakPositions}}} to filter out weak 
+            positions with very few interactions
+            \item{\code{\link{filterSparseReplicates}}} to filter out 
+            sparse replicates with many null interactions
         }
-        \item{Three normalization steps:}{
-            \itemize{
-                \item{\code{\link{normalizeTechnicalBiases}}}{
-                    to normalize technical biases in each replicates
-                }
-                \item{\code{\link{normalizeBiologicalBiases}}}{
-                    to normalize biological biases in each replicate
-                }
-                \item{\code{\link{normalizeDistanceEffect}}}{
-                    to normalize the distance effect in each chromosome
-                }
-            }
+        Three normalization steps:
+        \itemize{
+            \item{\code{\link{normalizeTechnicalBiases}}} to normalize 
+            technical biases in each replicates
+            \item{\code{\link{normalizeBiologicalBiases}}} to normalize 
+            biological biases in each replicate
+            \item{\code{\link{normalizeDistanceEffect}}} to normalize the 
+            distance effect in each chromosome
         }
-        \item{One computational step:}{
-            \itemize{
-                \item{\code{\link{detectCompartments}}}{
-                    to detect compartments in each condition and find
-                    significant changes between conditions.
-                }
-            }
+        One computational step:
+        \itemize{
+            \item{\code{\link{detectCompartments}}} to detect compartments 
+            in each condition and find significant changes between 
+            conditions.
         }
     }
 }
@@ -65,17 +54,12 @@ The parallel version of HiCDOC uses the
 \code{\link{BiocParallel}} package. Before to call the
 function in parallel you should specify the parallel parameters such as:
     \itemize{
-        \item{On Linux:
-
-             \code{multiParam <- BiocParallel::MulticoreParam(workers = 10)}
-         }
-         \item{On Windows:
-
+        \item{On Linux:}
+           \code{multiParam <- BiocParallel::MulticoreParam(workers = 10)}
+         \item{On Windows:}
              \code{multiParam <- BiocParallel::SnowParam(workers = 10)}
-        }
     }
-    And then you can register the parameters to be used by BiocParallel:
-
+    And then you can register the parameters to be used by BiocParallel: \\
     \code{BiocParallel::register(multiParam, default = TRUE)}
 
     You should be aware that using MulticoreParam, reproducibility of the
