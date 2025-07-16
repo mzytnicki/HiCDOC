@@ -12,17 +12,14 @@ test_that("plotConcordanceDifferences behaves as expected", {
         pp <- plotConcordanceDifferences(exampleHiCDOCDataSetProcessed),
         NA
     )
-    expect_is(pp, "ggplot")
-    expect_identical(
-        unlist(pp$labels),
-        c(
-            "x" = "Concordance",
-            "fill" = "Change\nof\ncompartment",
-            "title" = "Distribution of concordance differences",
-            "y" = "count",
-            "weight" = "weight"
-        )
-    )
+    labs <- ggplot2::get_labs(pp)
+    expect_equivalent(labs[["x"]], "Concordance")
+    expect_equivalent(labs[["fill"]], "Change\nof\ncompartment")
+    expect_equivalent(labs[["title"]], 
+                      "Distribution of concordance differences")
+    expect_equivalent(labs[["y"]], "count")
+    expect_equivalent(labs[["weight"]], "weight")
+    
     expect_is(pp$layers[[1]]$geom, "GeomBar")
     # No error when printed
     expect_error(print(pp), NA)
