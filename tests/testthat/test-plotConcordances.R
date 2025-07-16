@@ -15,16 +15,16 @@ test_that("plotConcordances behaves as expected", {
     expect_error(plotConcordances(exampleHiCDOCDataSetProcessed, 6), "Unknown")
 
     pp <- plotConcordances(exampleHiCDOCDataSetProcessed, 1)
-    expect_is(pp, "ggplot")
-    expect_identical(
-        pp$labels[c("title", "caption", "x", "y", "colour")],
-        list("title" = "Concordances of chromosome X by condition",
-             "caption" = "The grey areas are significant changes (adjusted p-value <= 5%)",
-             "x" = "position",
-             "y" = "concordance",
-             "colour" = "replicate"
-        )
-    )
+    expect_true(ggplot2::is_ggplot(pp))
+    labs <- ggplot2::get_labs(pp)
+    expect_equivalent(labs[["title"]], 
+        "Concordances of chromosome X by condition")
+    expect_equivalent(labs[["caption"]], 
+        "The grey areas are significant changes (adjusted p-value <= 5%)")
+    expect_equivalent(labs[["x"]], "position")
+    expect_equivalent(labs[["y"]], "concordance")
+    expect_equivalent(labs[["colour"]], "replicate")
+    
     expect_is(pp$layers[[1]]$geom, "GeomRect")
     expect_is(pp$layers[[2]]$geom, "GeomLine")
     # No error when printed

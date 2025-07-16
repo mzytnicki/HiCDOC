@@ -18,9 +18,10 @@ test_that("plotCompartmentChanges behaves as expected", {
     )
 
     pp <- plotCompartmentChanges(exampleHiCDOCDataSetProcessed, 1)
-    expect_is(pp, "ggplot")
-    expect_is(pp$labels, "list")
-    expect_equal(length(pp$labels), 0)
+    expect_true(ggplot2::is_ggplot(pp))
+    labs <- ggplot2::get_labs(pp)
+    expect_null(labs[["x"]])
+    expect_null(labs[["y"]])
     expect_is(pp$layers[[1]]$geom, "GeomDrawGrob")
     # No error when printed
     expect_error(print(pp), NA)

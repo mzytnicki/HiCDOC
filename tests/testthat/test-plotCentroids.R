@@ -13,17 +13,16 @@ test_that("plotCentroids behaves as expected", {
     expect_error(plotCentroids(exampleHiCDOCDataSetProcessed, 5), "Unknown")
 
     pp <- plotCentroids(exampleHiCDOCDataSetProcessed, 1)
-    expect_is(pp, "ggplot")
-    expect_identical(
-        unlist(pp$labels),
-        c("caption" = "Quality controls:\nCentroid PC1 inertia: OK\nA/B clustering consistency: OK",
-          "x" = "PC1  91.19 %",
-          "y" = "PC2  6.82 %",
-          "title" = "PCA on centroids of chromosome X",
-          "colour" = "compartment",
-          "shape" = "condition"
-        )
-    )
+    expect_true(ggplot2::is_ggplot(pp))
+    labs <- ggplot2::get_labs(pp)
+    expect_equivalent(labs[["caption"]], 
+        "Quality controls:\nCentroid PC1 inertia: OK\nA/B clustering consistency: OK")
+    expect_equivalent(labs[["x"]], "PC1  91.19 %")
+    expect_equivalent(labs[["y"]], "PC2  6.82 %")
+    expect_equivalent(labs[["title"]], 
+        "PCA on centroids of chromosome X")
+    expect_equivalent(labs[["colour"]], "compartment")
+    expect_equivalent(labs[["shape"]], "condition")
     expect_is(pp$layers[[1]]$geom, "GeomPoint")
     # No error when printed
     expect_error(print(pp), NA)
