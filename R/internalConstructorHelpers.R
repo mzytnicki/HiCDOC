@@ -82,17 +82,17 @@
     object <- InteractionSet::reduceRegions(object)
     objectRegions <- InteractionSet::regions(object)
     chromosomeNames <- unique(as.character(
-        GenomeInfoDb::seqnames(objectRegions)
+        Seqinfo::seqnames(objectRegions)
     ))
     chromosomeNames <- gtools::mixedsort(chromosomeNames)
-    GenomeInfoDb::seqlevels(
+    Seqinfo::seqlevels(
         InteractionSet::regions(object),
         pruning.mode = "coarse"
     ) <- chromosomeNames
 
     # Add chromosome column for split purpose
     chromosomes <-
-        GenomeInfoDb::seqnames(InteractionSet::anchors(object, "first"))
+        Seqinfo::seqnames(InteractionSet::anchors(object, "first"))
     chromosomes <- S4Vectors::Rle(factor(chromosomes, levels = chromosomeNames))
     S4Vectors::mcols(object) <- S4Vectors::DataFrame("chromosome" = chromosomes)
 

@@ -30,7 +30,7 @@ plotSelfInteractionRatios <- function(object, chromosome, checks=TRUE) {
     
     compartements <- as.data.table(
         object@compartments[
-            GenomeInfoDb::seqnames(object@compartments) == chromosomeName
+            Seqinfo::seqnames(object@compartments) == chromosomeName
         ]
     )
     dataplot <- data.table::merge.data.table(

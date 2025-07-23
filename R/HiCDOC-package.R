@@ -17,7 +17,7 @@
 #' @importFrom grid textGrob gpar
 #' @importFrom gridExtra arrangeGrob
 #' @importFrom multiHiCcompare make_hicexp cyclic_loess hic_table
-#' @importFrom GenomeInfoDb seqlevels seqnames
+#' @importFrom Seqinfo seqlevels seqnames
 #' @import data.table
 #' @useDynLib HiCDOC
 #' @aliases HiCDOC-package

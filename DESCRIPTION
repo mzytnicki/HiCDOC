@@ -1,7 +1,7 @@
 Package: HiCDOC
 Title: A/B compartment detection and differential analysis
-Version: 1.11.1
-Date: 2022-11-30
+Version: 1.11.2
+Date: 2025-07-22
 Authors@R: c(
     person("Kurylo", "Cyril", email = "cyril.kurylo@inrae.fr", role = c("aut")),
     person("Zytnicki", "Matthias", email = "matthias.zytnicki@inrae.fr", role = c("aut")),
@@ -35,7 +35,7 @@ Imports:
     gridExtra,
     data.table,
     multiHiCcompare,
-    GenomeInfoDb
+    Seqinfo
 LinkingTo: Rcpp
 Suggests:
     knitr,

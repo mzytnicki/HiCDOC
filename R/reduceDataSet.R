@@ -34,7 +34,7 @@
             SummarizedExperiment::mcols(object)$chromosome
         )
         object <- InteractionSet::reduceRegions(object)
-        GenomeInfoDb::seqlevels(
+        Seqinfo::seqlevels(
             InteractionSet::regions(object),
             pruning.mode = "coarse"
         ) <- object@chromosomes
@@ -61,7 +61,7 @@
                     stop("malformed HiCDOCDataSet")
                 }
                 if (dropLevels) {
-                    GenomeInfoDb::seqlevels(
+                    Seqinfo::seqlevels(
                         tmp,
                         pruning.mode = "coarse"
                     ) <- object@chromosomes
