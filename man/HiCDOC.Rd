@@ -51,7 +51,7 @@ Runs the default filtering, normalization, and computational steps on a
 }
 \subsection{Parallel processing}{
 The parallel version of HiCDOC uses the
-\code{\link{BiocParallel}} package. Before to call the
+\code{\link[BiocParallel]{BiocParallel}} package. Before to call the
 function in parallel you should specify the parallel parameters such as:
     \itemize{
         \item{On Linux:}
