@@ -80,7 +80,7 @@ setClass(
 #' @name HiCDOCDataSet-parameters
 #' @export
 defaultHiCDOCParameters <- list(
-    smallChromosomeThreshold = 100,
+    smallChromosomeThreshold = 0,
     sparseReplicateThreshold = 0.3,
     weakPositionThreshold = 1,
     cyclicLoessSpan = NA_real_,

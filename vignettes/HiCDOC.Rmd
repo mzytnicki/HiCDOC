@@ -216,6 +216,24 @@ Once your data is loaded, you can run all the filtering, normalization, and
 prediction steps with the command : **`HiCDOC(exampleHiCDOCDataSet)`**.
 This one-liner runs all the steps detailed below.
 
+Note that before running `HiCDOC()` you can set the specific parameters (or only a subset of them) for your object : 
+
+```
+parameters(exampleHiCDOCDataSet) <- list(
+  smallChromosomeThreshold = 100,
+  sparseReplicateThreshold = 0.3,
+  weakPositionThreshold = 1,
+  cyclicLoessSpan = NA_real_,
+  loessSampleSize = 20000,
+  kMeansDelta = 0.0001,
+  kMeansIterations = 50,
+  kMeansRestarts = 20,
+  PC1CheckThreshold = 0.75
+)
+```
+
+In the examples below, all that parameters are pass directly to the functions. 
+
 ## Filtering data
 
 Remove small chromosomes of length smaller than 100 positions 
