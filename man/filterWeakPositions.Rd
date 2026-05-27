@@ -12,8 +12,8 @@ filterWeakPositions(object, threshold = NULL)
 \item{threshold}{The minimum average interaction for a position to be kept. If a position's
 average interaction with the entire chromosome is lower than this value in
 any of the replicates, it is removed from all replicates and conditions.
-Defaults to \code{object$smallChromosomeThreshold} which is originally set to
-\code{defaultHiCDOCParameters$smallChromosomeThreshold} = 1.}
+Defaults to \code{object$weakPositionThreshold} which is originally set to
+\code{defaultHiCDOCParameters$weakPositionThreshold} = 1.}
 }
 \value{
 A filtered \code{\link{HiCDOCDataSet}}.

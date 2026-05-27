@@ -20,6 +20,7 @@ Useful links:
 
 Authors:
 \itemize{
+  \item Maigné Élise \email{elise.maigne@inrae.fr}
   \item Kurylo Cyril \email{cyril.kurylo@inrae.fr}
   \item Zytnicki Matthias \email{matthias.zytnicki@inrae.fr}
   \item Foissac Sylvain \email{sylvain.foissac@inrae.fr}

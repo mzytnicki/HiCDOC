@@ -24,6 +24,7 @@ A S4 HiCDOCDataSet object with 3 chromosomes, 3 conditions and 3 replicates.
 Can be retrieved by running :
 \code{data(exampleHiCDOCDataSet); 
 set.seed(123); 
+parameters(exampleHiCDOCDataSet) <- list(smallChromosomeThreshold = 100)
 exampleHiCDOCDataSetProcessed <- HiCDOC(exampleHiCDOCDataSet)}
 }
 \examples{
