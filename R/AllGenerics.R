@@ -138,7 +138,7 @@ setGeneric(
 #'             The minimum length (number of positions) for a chromosome to be
 #'             kept when filtering with \code{\link{filterSmallChromosomes}}.
 #'             Defaults to
-#'             \code{defaultHiCDOCParameters$smallChromosomeThreshold} = 100.
+#'             \code{defaultHiCDOCParameters$smallChromosomeThreshold} = 0.
 #'         }
 #'         \item{\code{sparseReplicateThreshold}}{
 #'             The minimum percentage of non-zero interactions for a chromosome
@@ -146,7 +146,7 @@ setGeneric(
 #'             \code{\link{filterSparseReplicates}}. If a chromosome replicate's
 #'             percentage of non-zero interactions is lower than this value, it
 #'             is removed. Defaults to
-#'             \code{defaultHiCDOCParameters$smallChromosomeThreshold} = 30%.
+#'             \code{defaultHiCDOCParameters$sparseReplicateThreshold} = 0.3.
 #'         }
 #'         \item{\code{weakPositionThreshold}}{
 #'             The minimum average interaction for a position to be kept when
@@ -154,13 +154,13 @@ setGeneric(
 #'             average interaction with the entire chromosome is lower than this
 #'             value in any of the replicates, it is removed from all replicates
 #'             and conditions. Defaults to
-#'             \code{defaultHiCDOCParameters$smallChromosomeThreshold} = 1.
+#'             \code{defaultHiCDOCParameters$weakPositionThreshold} = 1.
 #'         }
 #'         \item{\code{cyclicLoessSpan}}{
 #'             The span for cyclic loess normalization used in 
 #'             \code{\link{normalizeTechnicalBiases}}. This value is passed to 
 #'             \code{multiHiCcompare::cyclic_loess}. 
-#'             Defaults to NA indicating that span will be automatically 
+#'             Defaults to `NA` indicating that span will be automatically 
 #'             calculated using generalized cross validation.
 #'             For large dataset, it is highly recommended to set this value
 #'             to reduce computing time and necessary memory.
@@ -195,7 +195,7 @@ setGeneric(
 #'             The minimum percentage of variance that should be explained by
 #'             the first principal component of centroids to pass sanity check.
 #'             Defaults to 
-#'             \code{defaultHiCDOCParameters$PC1CheckThreshold} = 0.75
+#'             \code{defaultHiCDOCParameters$PC1CheckThreshold} = 0.75.
 #'         }
 #'     }
 #' }

@@ -32,17 +32,7 @@
 #' Can be retrieved by running :
 #' \code{data(exampleHiCDOCDataSet); 
 #' set.seed(123); 
-#' parameters(exampleHiCDOCDataSet) <- list(
-#'   smallChromosomeThreshold = 100,
-#'   sparseReplicateThreshold = 0.3,
-#'   weakPositionThreshold = 1,
-#'   cyclicLoessSpan = NA_real_,
-#'   loessSampleSize = 20000,
-#'   kMeansDelta = 0.0001,
-#'   kMeansIterations = 50,
-#'   kMeansRestarts = 20,
-#'   PC1CheckThreshold = 0.75
-#' )
+#' parameters(exampleHiCDOCDataSet) <- list(smallChromosomeThreshold = 100)
 #' exampleHiCDOCDataSetProcessed <- HiCDOC(exampleHiCDOCDataSet)}
 #'
 #' @format

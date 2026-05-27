@@ -67,8 +67,8 @@
 #' The minimum percentage of non-zero interactions for a chromosome replicate to
 #' be kept. If a chromosome replicate's percentage of non-zero interactions is
 #' lower than this value, it is removed. Defaults to
-#' \code{object$smallChromosomeThreshold} which is originally set to
-#' \code{defaultHiCDOCParameters$smallChromosomeThreshold = 30\%}.
+#' \code{object$sparseReplicateThreshold} which is originally set to
+#' \code{defaultHiCDOCParameters$sparseReplicateThreshold = 30\%}.
 #'
 #' @return
 #' A filtered \code{\link{HiCDOCDataSet}}.

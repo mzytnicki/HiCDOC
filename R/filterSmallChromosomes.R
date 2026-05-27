@@ -10,7 +10,7 @@
 #' @param threshold
 #' The minimum length (number of positions) for a chromosome to be kept.
 #' Defaults to \code{object$smallChromosomeThreshold} which is originally set to
-#' \code{defaultHiCDOCParameters$smallChromosomeThreshold} = 100.
+#' \code{defaultHiCDOCParameters$smallChromosomeThreshold} = 0.
 #'
 #' @return
 #' A filtered \code{\link{HiCDOCDataSet}}.
@@ -40,15 +40,16 @@ filterSmallChromosomes <- function(object, threshold = NULL) {
     }
     object@parameters <- .validateParameters(object@parameters)
     threshold <- object@parameters$smallChromosomeThreshold
-
-    message(
-        "Keeping chromosomes with at least ",
-        threshold,
-        " position",
-        if (threshold != 1)
-            "s",
-        "."
-    )
+    if(threshold<=1) {
+        threshold <- 1
+        message("Keeping non-empty chromosomes")
+    } else {
+        message(
+            "Keeping chromosomes with at least ",
+            threshold,
+            " positions."
+        )
+    }
 
     bigChromosomes <- vapply(
         object@totalBins,
@@ -60,33 +61,34 @@ filterSmallChromosomes <- function(object, threshold = NULL) {
     smallChromosomeNames <- object@chromosomes[
         !(object@chromosomes %in% bigChromosomeNames)
     ]
-
-    object <- reduceHiCDOCDataSet(
-        object,
-        chromosomes = bigChromosomeNames,
-        dropLevels = TRUE
-    )
-
-    message(
-        "Kept ",
-        length(bigChromosomeNames),
-        " chromosome",
-        if (length(bigChromosomeNames) != 1) "s",
-        if (length(bigChromosomeNames) > 0) ": " else ".",
-        paste(bigChromosomeNames, collapse = ", ")
-    )
-    message(
-        "Removed ",
-        length(smallChromosomeNames),
-        " chromosome",
-        if (length(smallChromosomeNames) != 1) "s",
-        if (length(smallChromosomeNames) > 0) ": " else ".",
-        paste(smallChromosomeNames, collapse = ", ")
-    )
-
-    if (length(bigChromosomeNames) == 0) {
-        warning("No data left!", call. = FALSE)
+    if(length(smallChromosomeNames)>0) {
+        object <- reduceHiCDOCDataSet(
+            object,
+            chromosomes = bigChromosomeNames,
+            dropLevels = TRUE
+        )
+        message(
+            "Kept ",
+            length(bigChromosomeNames),
+            " chromosome",
+            if (length(bigChromosomeNames) != 1) "s",
+            if (length(bigChromosomeNames) > 0) ": " else ".",
+            paste(bigChromosomeNames, collapse = ", ")
+        )
+        message(
+            "Removed ",
+            length(smallChromosomeNames),
+            " chromosome",
+            if (length(smallChromosomeNames) != 1) "s",
+            if (length(smallChromosomeNames) > 0) ": " else ".",
+            paste(smallChromosomeNames, collapse = ", ")
+        )
+        
+        if (length(bigChromosomeNames) == 0) {
+            warning("No data left!", call. = FALSE)
+        }
+    } else {
+        message("All chromosomes kept.")
     }
-
     return(object)
 }

@@ -15,3 +15,4 @@ inst/doc
 /renv/
 renv.lock
 .Rprofile
+.positai

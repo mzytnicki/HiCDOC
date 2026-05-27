@@ -44,9 +44,9 @@ Suggests:
     BiocStyle,
     BiocManager,
     rhdf5
-RoxygenNote: 7.3.2
 biocViews:
     HiC, DNA3DStructure, Normalization, Sequencing, Software, Clustering
 VignetteBuilder: knitr
 URL: https://github.com/mzytnicki/HiCDOC
 BugReports: https://github.com/mzytnicki/HiCDOC/issues
+Config/roxygen2/version: 8.0.0
