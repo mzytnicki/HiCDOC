@@ -126,7 +126,7 @@ their p-values, the algorithm follows three steps:
     }
 }
 \subsection{Parallel processing}{
-The parallel version of detectCompartments uses the
+The parallel version of \code{detectCompartments} uses the
 \code{\link[BiocParallel]{bpmapply}} function. Before to call the
 function in parallel you should specify the parallel parameters such as:
     \itemize{
@@ -139,7 +139,8 @@ function in parallel you should specify the parallel parameters such as:
              \code{multiParam <- BiocParallel::SnowParam(workers = 10)}
         }
     }
-    And then you can register the parameters to be used by BiocParallel:
+    And then you can register the parameters to be used by 
+    \pkg{BiocParallel}:
 
     \code{BiocParallel::register(multiParam, default = TRUE)}
 

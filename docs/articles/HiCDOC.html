@@ -6,19 +6,20 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>HiCDOC • HiCDOC</title>
-<!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script><!-- Bootstrap --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous">
+<!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><!-- Bootstrap --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script><!-- bootstrap-toc --><link rel="stylesheet" href="../bootstrap-toc.css">
 <script src="../bootstrap-toc.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
 <!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="../pkgdown.css" rel="stylesheet">
 <script src="../pkgdown.js"></script><meta property="og:title" content="HiCDOC">
-<meta property="og:description" content="HiCDOC">
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
 </head>
 <body data-spy="scroll" data-target="#toc">
+
+
     <div class="container template-article">
       <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -31,18 +32,12 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">HiCDOC</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.99.10</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.15.0</span>
       </span>
     </div>
 
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
-<li>
-  <a href="../index.html">
-    <span class="fas fa-home fa-lg"></span>
-     
-  </a>
-</li>
 <li>
   <a href="../articles/HiCDOC.html">Get started</a>
 </li>
@@ -52,9 +47,9 @@
       </ul>
 <ul class="nav navbar-nav navbar-right">
 <li>
-  <a href="https://github.com/mzytnicki/HiCDOC/">
+  <a href="https://github.com/mzytnicki/HiCDOC/" class="external-link">
     <span class="fab fa-github fa-lg"></span>
-     
+
   </a>
 </li>
       </ul>
@@ -65,41 +60,56 @@
 </div>
 <!--/.navbar -->
 
-      
 
-      </header><script src="HiCDOC_files/header-attrs-2.9/header-attrs.js"></script><div class="row">
+
+      </header><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
       <h1 data-toc-skip>HiCDOC</h1>
-                        <h4 class="author">Cyril Kurylo &amp; Matthias Zytnicki &amp; Sylvain Foissac &amp; Elise Maigné</h4>
+                        <h4 data-toc-skip class="author">Cyril Kurylo
+&amp; Matthias Zytnicki &amp; Sylvain Foissac &amp; Elise Maigné</h4>
             
-            <h4 class="date">09/02/2021</h4>
+            <h4 data-toc-skip class="date">05/28/2026</h4>
       
-      <small class="dont-index">Source: <a href="https://github.com/mzytnicki/HiCDOC/blob/master/vignettes/HiCDOC.Rmd"><code>vignettes/HiCDOC.Rmd</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/mzytnicki/HiCDOC/blob/HEAD/vignettes/HiCDOC.Rmd" class="external-link"><code>vignettes/HiCDOC.Rmd</code></a></small>
       <div class="hidden name"><code>HiCDOC.Rmd</code></div>
 
     </div>
 
     
     
-<p>The aim of HiCDOC is to detect significant A/B compartment changes, using Hi-C data with replicates.</p>
-<p>HiCDOC normalizes intrachromosomal Hi-C matrices, uses unsupervised learning to predict A/B compartments from multiple replicates, and detects significant compartment changes between experiment conditions.</p>
+<div class="section level2">
+<h2 id="introduction">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a>
+</h2>
+<p>The aim of HiCDOC is to detect significant A/B compartment changes,
+using Hi-C data with replicates.</p>
+<p>HiCDOC normalizes intrachromosomal Hi-C matrices, uses unsupervised
+learning to predict A/B compartments from multiple replicates, and
+detects significant compartment changes between experiment
+conditions.</p>
 <p>It provides a collection of functions assembled into a pipeline:</p>
 <ol style="list-style-type: decimal">
 <li>
 <a href="#filtering-data">Filter</a>:
 <ol style="list-style-type: decimal">
 <li>Remove chromosomes which are too small to be useful.</li>
-<li>Filter sparse replicates to remove uninformative replicates with few interactions.</li>
-<li>Filter positions (<em>bins</em>) which have too few interactions.</li>
+<li>Filter sparse replicates to remove uninformative replicates with few
+interactions.</li>
+<li>Filter positions (<em>bins</em>) which have too few
+interactions.</li>
 </ol>
 </li>
 <li>
 <a href="#normalizing-biases">Normalize</a>:
 <ol style="list-style-type: decimal">
-<li>Normalize technical biases (inter-matrix normalization) using cyclic loess normalization <span class="citation">(Stansfield, Cresswell, and Dozmorov 2019)</span>, so that matrices are comparable.</li>
-<li>Normalize biological biases (intra-matrix normalization) using Knight-Ruiz matrix balancing <span class="citation">(Knight and Ruiz 2012)</span>, so that all the bins are comparable.</li>
-<li>Normalize the distance effect, which results from higher interaction proportions between closer regions, with a MD loess.</li>
+<li>Normalize technical biases (inter-matrix normalization) using cyclic
+loess normalization <span class="citation">(Stansfield et al.
+2019)</span>, so that matrices are comparable.</li>
+<li>Normalize biological biases (intra-matrix normalization) using
+Knight-Ruiz matrix balancing <span class="citation">(Knight and Ruiz
+2012)</span>, so that all the bins are comparable.</li>
+<li>Normalize the distance effect, which results from higher interaction
+proportions between closer regions, with a MD loess.</li>
 </ol>
 </li>
 <li>
@@ -113,446 +123,623 @@
 <a href="#visualizing-data-and-results">Visualize</a>:
 <ol style="list-style-type: decimal">
 <li>Plot the interaction matrices of each replicate.</li>
-<li>Plot the overall distance effect on the proportion of interactions.</li>
-<li>Plot the compartments in each chromosome, along with their concordance (confidence measure) in each replicate, and significant changes between experiment conditions.</li>
+<li>Plot the overall distance effect on the proportion of
+interactions.</li>
+<li>Plot the compartments in each chromosome, along with their
+concordance (confidence measure) in each replicate, and significant
+changes between experiment conditions.</li>
 <li>Plot the overall distribution of concordance differences.</li>
 <li>Plot the result of the PCA on the compartments’ centroids.</li>
-<li>Plot the boxplots of self interaction ratios (differences between self interactions and the medians of other interactions) of each compartment, which is used for the A/B classification.</li>
+<li>Plot the boxplots of self interaction ratios (differences between
+self interactions and the medians of other interactions) of each
+compartment, which is used for the A/B classification.</li>
 </ol>
 </li>
 </ol>
-<div id="usage" class="section level1">
-<h1 class="hasAnchor">
-<a href="#usage" class="anchor"></a>Usage</h1>
-<div id="installation" class="section level2">
-<h2 class="hasAnchor">
-<a href="#installation" class="anchor"></a>Installation</h2>
+</div>
+<div class="section level2">
+<h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
+</h2>
 <p>HiCDOC can be installed from Bioconductor:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw">if</span> <span class="op">(</span><span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/ns-load.html">requireNamespace</a></span><span class="op">(</span><span class="st">"BiocManager"</span>, quietly<span class="op">=</span><span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span>
-    <span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"BiocManager"</span><span class="op">)</span>
-<span class="fu">BiocManager</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/BiocManager/man/install.html">install</a></span><span class="op">(</span><span class="st">"HiCDOC"</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="kw">if</span> <span class="op">(</span><span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/ns-load.html" class="external-link">requireNamespace</a></span><span class="op">(</span><span class="st">"BiocManager"</span>, quietly<span class="op">=</span><span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span></span>
+<span>    <span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"BiocManager"</span><span class="op">)</span></span>
+<span><span class="fu">BiocManager</span><span class="fu">::</span><span class="fu"><a href="https://bioconductor.github.io/BiocManager/reference/install.html" class="external-link">install</a></span><span class="op">(</span><span class="st">"HiCDOC"</span><span class="op">)</span></span></code></pre></div>
 <p>The package can then be loaded:</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/mzytnicki/HiCDOC">HiCDOC</a></span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/mzytnicki/HiCDOC" class="external-link">HiCDOC</a></span><span class="op">)</span></span>
+<span><span class="co">#&gt; Loading required package: InteractionSet</span></span>
+<span><span class="co">#&gt; Loading required package: GenomicRanges</span></span>
+<span><span class="co">#&gt; Loading required package: stats4</span></span>
+<span><span class="co">#&gt; Loading required package: BiocGenerics</span></span>
+<span><span class="co">#&gt; Loading required package: generics</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; Attaching package: 'generics'</span></span>
+<span><span class="co">#&gt; The following objects are masked from 'package:base':</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt;     as.difftime, as.factor, as.ordered, intersect, is.element, setdiff,</span></span>
+<span><span class="co">#&gt;     setequal, union</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; Attaching package: 'BiocGenerics'</span></span>
+<span><span class="co">#&gt; The following objects are masked from 'package:stats':</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt;     IQR, mad, sd, var, xtabs</span></span>
+<span><span class="co">#&gt; The following objects are masked from 'package:base':</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt;     anyDuplicated, aperm, append, as.data.frame, basename, cbind,</span></span>
+<span><span class="co">#&gt;     colnames, dirname, do.call, duplicated, eval, evalq, Filter, Find,</span></span>
+<span><span class="co">#&gt;     get, grep, grepl, is.unsorted, lapply, Map, mapply, match, mget,</span></span>
+<span><span class="co">#&gt;     order, paste, pmax, pmax.int, pmin, pmin.int, Position, rank,</span></span>
+<span><span class="co">#&gt;     rbind, Reduce, rownames, sapply, saveRDS, table, tapply, unique,</span></span>
+<span><span class="co">#&gt;     unsplit, which.max, which.min</span></span>
+<span><span class="co">#&gt; Loading required package: S4Vectors</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; Attaching package: 'S4Vectors'</span></span>
+<span><span class="co">#&gt; The following object is masked from 'package:utils':</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt;     findMatches</span></span>
+<span><span class="co">#&gt; The following objects are masked from 'package:base':</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt;     expand.grid, I, unname</span></span>
+<span><span class="co">#&gt; Loading required package: IRanges</span></span>
+<span><span class="co">#&gt; Loading required package: Seqinfo</span></span>
+<span><span class="co">#&gt; Loading required package: SummarizedExperiment</span></span>
+<span><span class="co">#&gt; Loading required package: MatrixGenerics</span></span>
+<span><span class="co">#&gt; Loading required package: matrixStats</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; Attaching package: 'MatrixGenerics'</span></span>
+<span><span class="co">#&gt; The following objects are masked from 'package:matrixStats':</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt;     colAlls, colAnyNAs, colAnys, colAvgsPerRowSet, colCollapse,</span></span>
+<span><span class="co">#&gt;     colCounts, colCummaxs, colCummins, colCumprods, colCumsums,</span></span>
+<span><span class="co">#&gt;     colDiffs, colIQRDiffs, colIQRs, colLogSumExps, colMadDiffs,</span></span>
+<span><span class="co">#&gt;     colMads, colMaxs, colMeans2, colMedians, colMins, colOrderStats,</span></span>
+<span><span class="co">#&gt;     colProds, colQuantiles, colRanges, colRanks, colSdDiffs, colSds,</span></span>
+<span><span class="co">#&gt;     colSums2, colTabulates, colVarDiffs, colVars, colWeightedMads,</span></span>
+<span><span class="co">#&gt;     colWeightedMeans, colWeightedMedians, colWeightedSds,</span></span>
+<span><span class="co">#&gt;     colWeightedVars, rowAlls, rowAnyNAs, rowAnys, rowAvgsPerColSet,</span></span>
+<span><span class="co">#&gt;     rowCollapse, rowCounts, rowCummaxs, rowCummins, rowCumprods,</span></span>
+<span><span class="co">#&gt;     rowCumsums, rowDiffs, rowIQRDiffs, rowIQRs, rowLogSumExps,</span></span>
+<span><span class="co">#&gt;     rowMadDiffs, rowMads, rowMaxs, rowMeans2, rowMedians, rowMins,</span></span>
+<span><span class="co">#&gt;     rowOrderStats, rowProds, rowQuantiles, rowRanges, rowRanks,</span></span>
+<span><span class="co">#&gt;     rowSdDiffs, rowSds, rowSums2, rowTabulates, rowVarDiffs, rowVars,</span></span>
+<span><span class="co">#&gt;     rowWeightedMads, rowWeightedMeans, rowWeightedMedians,</span></span>
+<span><span class="co">#&gt;     rowWeightedSds, rowWeightedVars</span></span>
+<span><span class="co">#&gt; Loading required package: Biobase</span></span>
+<span><span class="co">#&gt; Welcome to Bioconductor</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt;     Vignettes contain introductory material; view with</span></span>
+<span><span class="co">#&gt;     'browseVignettes()'. To cite Bioconductor, see</span></span>
+<span><span class="co">#&gt;     'citation("Biobase")', and for packages 'citation("pkgname")'.</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; Attaching package: 'Biobase'</span></span>
+<span><span class="co">#&gt; The following object is masked from 'package:MatrixGenerics':</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt;     rowMedians</span></span>
+<span><span class="co">#&gt; The following objects are masked from 'package:matrixStats':</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt;     anyMissing, rowMedians</span></span></code></pre></div>
 </div>
-<div id="importing-hi-c-data" class="section level2">
-<h2 class="hasAnchor">
-<a href="#importing-hi-c-data" class="anchor"></a>Importing Hi-C data</h2>
-<p>HiCDOC can import Hi-C data sets in various different formats: - Tabular <code>.tsv</code> files. - Cooler <code>.cool</code> or <code>.mcool</code> files. - Juicer <code>.hic</code> files. - HiC-Pro <code>.matrix</code> and <code>.bed</code> files.</p>
-<div id="tabular-files" class="section level3">
-<h3 class="hasAnchor">
-<a href="#tabular-files" class="anchor"></a>Tabular files</h3>
-<p>A tabular file is a tab-separated multi-replicate sparse matrix with a header:</p>
-<pre><code>chromosome    position 1    position 2    C1.R1    C1.R2    C2.R1    ...
-Y             1500000       7500000       145      184      72       ...
-...</code></pre>
-<p>The number of interactions between <code>position 1</code> and <code>position 2</code> of <code>chromosome</code> are reported in each <code>condition.replicate</code> column. There is no limit to the number of conditions and replicates.</p>
+<div class="section level2">
+<h2 id="importing-hi-c-data">Importing Hi-C data<a class="anchor" aria-label="anchor" href="#importing-hi-c-data"></a>
+</h2>
+<p>HiCDOC can import Hi-C data sets in various different formats: -
+Tabular <code>.tsv</code> files. - Cooler <code>.cool</code> or
+<code>.mcool</code> files. - Juicer <code>.hic</code> files. - HiC-Pro
+<code>.matrix</code> and <code>.bed</code> files.</p>
+<div class="section level3">
+<h3 id="tabular-files">Tabular files<a class="anchor" aria-label="anchor" href="#tabular-files"></a>
+</h3>
+<p>A tabular file is a tab-separated multi-replicate sparse matrix with
+a header:</p>
+<p>chromosome position 1 position 2 C1.R1 C1.R2 C2.R1 … Y 1500000
+7500000 145 184 72 … …</p>
+<p>The number of interactions between <code>position 1</code> and
+<code>position 2</code> of <code>chromosome</code> are reported in each
+<code>condition.replicate</code> column. There is no limit to the number
+of conditions and replicates.</p>
 <p>To load Hi-C data in this format:</p>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">hic.experiment</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/HiCDOCDataSetFromTabular.html">HiCDOCDataSetFromTabular</a></span><span class="op">(</span><span class="st">'path/to/data.tsv'</span><span class="op">)</span></span></code></pre></div>
+</div>
+<div class="section level3">
+<h3 id="cooler-files">Cooler files<a class="anchor" aria-label="anchor" href="#cooler-files"></a>
+</h3>
+<p>To load <code>.cool</code> or <code>.mcool</code> files generated by
+<a href="https://cooler.readthedocs.io/en/latest/" class="external-link">Cooler</a> <span class="citation">(Abdennur and Mirny 2019)</span>:</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">hic.experiment</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/HiCDOCDataSetFromTabular.html">HiCDOCDataSetFromTabular</a></span><span class="op">(</span><span class="st">'path/to/data.tsv'</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="co"># Path to each file</span></span>
+<span><span class="va">paths</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span></span>
+<span>    <span class="st">'path/to/condition-1.replicate-1.cool'</span>,</span>
+<span>    <span class="st">'path/to/condition-1.replicate-2.cool'</span>,</span>
+<span>    <span class="st">'path/to/condition-2.replicate-1.cool'</span>,</span>
+<span>    <span class="st">'path/to/condition-2.replicate-2.cool'</span>,</span>
+<span>    <span class="st">'path/to/condition-3.replicate-1.cool'</span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Replicate and condition of each file. Can be names instead of numbers.</span></span>
+<span><span class="va">replicates</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">1</span><span class="op">)</span></span>
+<span><span class="va">conditions</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">2</span>, <span class="fl">3</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Resolution to select in .mcool files</span></span>
+<span><span class="va">binSize</span> <span class="op">=</span> <span class="fl">500000</span></span>
+<span></span>
+<span><span class="co"># Instantiation of data set</span></span>
+<span><span class="va">hic.experiment</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/HiCDOCDataSetFromCool.html">HiCDOCDataSetFromCool</a></span><span class="op">(</span></span>
+<span>    <span class="va">paths</span>,</span>
+<span>    replicates <span class="op">=</span> <span class="va">replicates</span>,</span>
+<span>    conditions <span class="op">=</span> <span class="va">conditions</span>,</span>
+<span>    binSize <span class="op">=</span> <span class="va">binSize</span> <span class="co"># Specified for .mcool files.</span></span>
+<span><span class="op">)</span></span></code></pre></div>
 </div>
-<div id="cooler-files" class="section level3">
-<h3 class="hasAnchor">
-<a href="#cooler-files" class="anchor"></a>Cooler files</h3>
-<p>To load <code>.cool</code> or <code>.mcool</code> files generated by <a href="https://cooler.readthedocs.io/en/latest/">Cooler</a> <span class="citation">(Abdennur and Mirny 2019)</span>:</p>
+<div class="section level3">
+<h3 id="juicer-files">Juicer files<a class="anchor" aria-label="anchor" href="#juicer-files"></a>
+</h3>
+<p>To load <code>.hic</code> files generated by <a href="https://github.com/aidenlab/juicer/wiki/Data" class="external-link">Juicer</a> <span class="citation">(Durand 2016)</span>:</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># Path to each file</span>
-<span class="va">paths</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span>
-  <span class="st">'path/to/condition-1.replicate-1.cool'</span>,
-  <span class="st">'path/to/condition-1.replicate-2.cool'</span>,
-  <span class="st">'path/to/condition-2.replicate-1.cool'</span>,
-  <span class="st">'path/to/condition-2.replicate-2.cool'</span>,
-  <span class="st">'path/to/condition-3.replicate-1.cool'</span>
-<span class="op">)</span>
-
-<span class="co"># Replicate and condition of each file. Can be names instead of numbers.</span>
-<span class="va">replicates</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">1</span><span class="op">)</span>
-<span class="va">conditions</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">2</span>, <span class="fl">3</span><span class="op">)</span>
-
-<span class="co"># Resolution to select in .mcool files</span>
-<span class="va">binSize</span> <span class="op">=</span> <span class="fl">500000</span>
-
-<span class="co"># Instantiation of data set</span>
-<span class="va">hic.experiment</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/HiCDOCDataSetFromCool.html">HiCDOCDataSetFromCool</a></span><span class="op">(</span>
-  <span class="va">paths</span>,
-  replicates <span class="op">=</span> <span class="va">replicates</span>,
-  conditions <span class="op">=</span> <span class="va">conditions</span>,
-  binSize <span class="op">=</span> <span class="va">binSize</span> <span class="co"># Specified for .mcool files.</span>
-<span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="co"># Path to each file</span></span>
+<span><span class="va">paths</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span></span>
+<span>    <span class="st">'path/to/condition-1.replicate-1.hic'</span>,</span>
+<span>    <span class="st">'path/to/condition-1.replicate-2.hic'</span>,</span>
+<span>    <span class="st">'path/to/condition-2.replicate-1.hic'</span>,</span>
+<span>    <span class="st">'path/to/condition-2.replicate-2.hic'</span>,</span>
+<span>    <span class="st">'path/to/condition-3.replicate-1.hic'</span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Replicate and condition of each file. Can be names instead of numbers.</span></span>
+<span><span class="va">replicates</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">1</span><span class="op">)</span></span>
+<span><span class="va">conditions</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">2</span>, <span class="fl">3</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Resolution to select</span></span>
+<span><span class="va">binSize</span> <span class="op">&lt;-</span> <span class="fl">500000</span></span>
+<span></span>
+<span><span class="co"># Instantiation of data set</span></span>
+<span><span class="va">hic.experiment</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/HiCDOCDataSetFromHiC.html">HiCDOCDataSetFromHiC</a></span><span class="op">(</span></span>
+<span>    <span class="va">paths</span>,</span>
+<span>    replicates <span class="op">=</span> <span class="va">replicates</span>,</span>
+<span>    conditions <span class="op">=</span> <span class="va">conditions</span>,</span>
+<span>    binSize <span class="op">=</span> <span class="va">binSize</span></span>
+<span><span class="op">)</span></span></code></pre></div>
 </div>
-<div id="juicer-files" class="section level3">
-<h3 class="hasAnchor">
-<a href="#juicer-files" class="anchor"></a>Juicer files</h3>
-<p>To load <code>.hic</code> files generated by <a href="https://github.com/aidenlab/juicer/wiki/Data">Juicer</a> <span class="citation">(Durand 2016)</span>:</p>
+<div class="section level3">
+<h3 id="hic-pro-files">HiC-Pro files<a class="anchor" aria-label="anchor" href="#hic-pro-files"></a>
+</h3>
+<p>To load <code>.matrix</code> and <code>.bed</code> files generated by
+<a href="https://github.com/nservant/HiC-Pro" class="external-link">HiC-Pro</a> <span class="citation">(Servant 2015)</span>:</p>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># Path to each file</span>
-<span class="va">paths</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span>
-  <span class="st">'path/to/condition-1.replicate-1.hic'</span>,
-  <span class="st">'path/to/condition-1.replicate-2.hic'</span>,
-  <span class="st">'path/to/condition-2.replicate-1.hic'</span>,
-  <span class="st">'path/to/condition-2.replicate-2.hic'</span>,
-  <span class="st">'path/to/condition-3.replicate-1.hic'</span>
-<span class="op">)</span>
-
-<span class="co"># Replicate and condition of each file. Can be names instead of numbers.</span>
-<span class="va">replicates</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">1</span><span class="op">)</span>
-<span class="va">conditions</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">2</span>, <span class="fl">3</span><span class="op">)</span>
-
-<span class="co"># Resolution to select</span>
-<span class="va">binSize</span> <span class="op">&lt;-</span> <span class="fl">500000</span>
-
-<span class="co"># Instantiation of data set</span>
-<span class="va">hic.experiment</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/HiCDOCDataSetFromHiC.html">HiCDOCDataSetFromHiC</a></span><span class="op">(</span>
-  <span class="va">paths</span>,
-  replicates <span class="op">=</span> <span class="va">replicates</span>,
-  conditions <span class="op">=</span> <span class="va">conditions</span>,
-  binSize <span class="op">=</span> <span class="va">binSize</span>
-<span class="op">)</span></code></pre></div>
-</div>
-<div id="hic-pro-files" class="section level3">
-<h3 class="hasAnchor">
-<a href="#hic-pro-files" class="anchor"></a>HiC-Pro files</h3>
-<p>To load <code>.matrix</code> and <code>.bed</code> files generated by <a href="https://github.com/nservant/HiC-Pro">HiC-Pro</a> <span class="citation">(Servant 2015)</span>:</p>
-<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># Path to each matrix file</span>
-<span class="va">matrixPaths</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span>
-  <span class="st">'path/to/condition-1.replicate-1.matrix'</span>,
-  <span class="st">'path/to/condition-1.replicate-2.matrix'</span>,
-  <span class="st">'path/to/condition-2.replicate-1.matrix'</span>,
-  <span class="st">'path/to/condition-2.replicate-2.matrix'</span>,
-  <span class="st">'path/to/condition-3.replicate-1.matrix'</span>
-<span class="op">)</span>
-
-<span class="co"># Path to each bed file</span>
-<span class="va">bedPaths</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span>
-  <span class="st">'path/to/condition-1.replicate-1.bed'</span>,
-  <span class="st">'path/to/condition-1.replicate-2.bed'</span>,
-  <span class="st">'path/to/condition-2.replicate-1.bed'</span>,
-  <span class="st">'path/to/condition-2.replicate-2.bed'</span>,
-  <span class="st">'path/to/condition-3.replicate-1.bed'</span>
-<span class="op">)</span>
-
-<span class="co"># Replicate and condition of each file. Can be names instead of numbers.</span>
-<span class="va">replicates</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">1</span><span class="op">)</span>
-<span class="va">conditions</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">2</span>, <span class="fl">3</span><span class="op">)</span>
-
-<span class="co"># Instantiation of data set</span>
-<span class="va">hic.experiment</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/HiCDOCDataSetFromHiCPro.html">HiCDOCDataSetFromHiCPro</a></span><span class="op">(</span>
-  matrixPaths <span class="op">=</span> <span class="va">matrixPaths</span>,
-  bedPaths <span class="op">=</span> <span class="va">bedPaths</span>,
-  replicates <span class="op">=</span> <span class="va">replicates</span>,
-  conditions <span class="op">=</span> <span class="va">conditions</span>
-<span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="co"># Path to each matrix file</span></span>
+<span><span class="va">matrixPaths</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span></span>
+<span>    <span class="st">'path/to/condition-1.replicate-1.matrix'</span>,</span>
+<span>    <span class="st">'path/to/condition-1.replicate-2.matrix'</span>,</span>
+<span>    <span class="st">'path/to/condition-2.replicate-1.matrix'</span>,</span>
+<span>    <span class="st">'path/to/condition-2.replicate-2.matrix'</span>,</span>
+<span>    <span class="st">'path/to/condition-3.replicate-1.matrix'</span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Path to each bed file</span></span>
+<span><span class="va">bedPaths</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span></span>
+<span>    <span class="st">'path/to/condition-1.replicate-1.bed'</span>,</span>
+<span>    <span class="st">'path/to/condition-1.replicate-2.bed'</span>,</span>
+<span>    <span class="st">'path/to/condition-2.replicate-1.bed'</span>,</span>
+<span>    <span class="st">'path/to/condition-2.replicate-2.bed'</span>,</span>
+<span>    <span class="st">'path/to/condition-3.replicate-1.bed'</span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Replicate and condition of each file. Can be names instead of numbers.</span></span>
+<span><span class="va">replicates</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">1</span><span class="op">)</span></span>
+<span><span class="va">conditions</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">2</span>, <span class="fl">3</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Instantiation of data set</span></span>
+<span><span class="va">hic.experiment</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/HiCDOCDataSetFromHiCPro.html">HiCDOCDataSetFromHiCPro</a></span><span class="op">(</span></span>
+<span>    matrixPaths <span class="op">=</span> <span class="va">matrixPaths</span>,</span>
+<span>    bedPaths <span class="op">=</span> <span class="va">bedPaths</span>,</span>
+<span>    replicates <span class="op">=</span> <span class="va">replicates</span>,</span>
+<span>    conditions <span class="op">=</span> <span class="va">conditions</span></span>
+<span><span class="op">)</span></span></code></pre></div>
 </div>
 </div>
-<div id="running-the-hicdoc-pipeline" class="section level2">
-<h2 class="hasAnchor">
-<a href="#running-the-hicdoc-pipeline" class="anchor"></a>Running the HiCDOC pipeline</h2>
+<div class="section level2">
+<h2 id="running-the-hicdoc-pipeline">Running the HiCDOC pipeline<a class="anchor" aria-label="anchor" href="#running-the-hicdoc-pipeline"></a>
+</h2>
 <p>An example dataset can be loaded from the HiCDOC package:</p>
-<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/data.html">data</a></span><span class="op">(</span><span class="va">exampleHiCDOCDataSet</span><span class="op">)</span></code></pre></div>
-<p>Once your data is loaded, you can run all the filtering, normalization, and prediction steps with the command : <strong><code><a href="../reference/HiCDOC.html">HiCDOC(exampleHiCDOCDataSet)</a></code></strong>. This one-liner runs all the steps detailed below.</p>
-<div id="filtering-data" class="section level3">
-<h3 class="hasAnchor">
-<a href="#filtering-data" class="anchor"></a>Filtering data</h3>
-<p>Remove small chromosomes of length smaller than 100 positions (100 is the default value):</p>
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">exampleHiCDOCDataSet</span><span class="op">)</span></span></code></pre></div>
+<p>Once your data is loaded, you can run all the filtering,
+normalization, and prediction steps with the command :
+<strong><code>HiCDOC(exampleHiCDOCDataSet)</code></strong>. This
+one-liner runs all the steps detailed below.</p>
+<p>Note that before running <code><a href="../reference/HiCDOC.html">HiCDOC()</a></code> you can set the
+specific parameters (or only a subset of them) for your object :</p>
+<pre><code><span><span class="fu"><a href="../reference/HiCDOCDataSet-parameters.html">parameters</a></span><span class="op">(</span><span class="va">exampleHiCDOCDataSet</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span></span>
+<span>  smallChromosomeThreshold <span class="op">=</span> <span class="fl">100</span>,</span>
+<span>  sparseReplicateThreshold <span class="op">=</span> <span class="fl">0.3</span>,</span>
+<span>  weakPositionThreshold <span class="op">=</span> <span class="fl">1</span>,</span>
+<span>  cyclicLoessSpan <span class="op">=</span> <span class="cn">NA_real_</span>,</span>
+<span>  loessSampleSize <span class="op">=</span> <span class="fl">20000</span>,</span>
+<span>  kMeansDelta <span class="op">=</span> <span class="fl">0.0001</span>,</span>
+<span>  kMeansIterations <span class="op">=</span> <span class="fl">50</span>,</span>
+<span>  kMeansRestarts <span class="op">=</span> <span class="fl">20</span>,</span>
+<span>  PC1CheckThreshold <span class="op">=</span> <span class="fl">0.75</span></span>
+<span><span class="op">)</span></span></code></pre>
+<p>In the examples below, all that parameters are pass directly to the
+functions.</p>
+<div class="section level3">
+<h3 id="filtering-data">Filtering data<a class="anchor" aria-label="anchor" href="#filtering-data"></a>
+</h3>
+<p>Remove small chromosomes of length smaller than 100 positions (100 is
+the default value):</p>
 <div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">hic.experiment</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/filterSmallChromosomes.html">filterSmallChromosomes</a></span><span class="op">(</span><span class="va">exampleHiCDOCDataSet</span>, threshold <span class="op">=</span> <span class="fl">100</span><span class="op">)</span>
-<span class="co">#&gt; Keeping chromosomes with at least 100 positions.</span>
-<span class="co">#&gt; Kept 3 chromosomes: X, Y, Z</span>
-<span class="co">#&gt; Removed 1 chromosome: W</span></code></pre></div>
-<p>Remove sparse replicates filled with less than 30% non-zero interactions (30% is the default value):</p>
+<code class="sourceCode R"><span><span class="va">hic.experiment</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/filterSmallChromosomes.html">filterSmallChromosomes</a></span><span class="op">(</span><span class="va">exampleHiCDOCDataSet</span>, threshold <span class="op">=</span> <span class="fl">100</span><span class="op">)</span></span>
+<span><span class="co">#&gt; Keeping chromosomes with at least 100 positions.</span></span>
+<span><span class="co">#&gt; Kept 3 chromosomes: X, Y, Z</span></span>
+<span><span class="co">#&gt; Removed 1 chromosome: W</span></span></code></pre></div>
+<p>Remove sparse replicates filled with less than 30% non-zero
+interactions (30% is the default value):</p>
 <div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">hic.experiment</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/filterSparseReplicates.html">filterSparseReplicates</a></span><span class="op">(</span><span class="va">hic.experiment</span>, threshold <span class="op">=</span> <span class="fl">0.3</span><span class="op">)</span>
-<span class="co">#&gt; Keeping replicates filled with at least 30% non-zero interactions.</span>
-<span class="co">#&gt; Removed interactions matrix of chromosome X, condition 1, replicate R2 filled at 2.347%.</span>
-<span class="co">#&gt; Removed interactions matrix of chromosome X, condition 2, replicate R1 filled at 0%.</span>
-<span class="co">#&gt; Removed interactions matrix of chromosome Z, condition 1, replicate R1 filled at 0%.</span>
-<span class="co">#&gt; Removed interactions matrix of chromosome Z, condition 2, replicate R1 filled at 0%.</span>
-<span class="co">#&gt; Removed interactions matrix of chromosome Z, condition 2, replicate R2 filled at 0%.</span>
-<span class="co">#&gt; Removed interactions matrix of chromosome Z, condition 3, replicate R1 filled at 0%.</span>
-<span class="co">#&gt; Removed interactions matrix of chromosome Z, condition 3, replicate R2 filled at 0%.</span>
-<span class="co">#&gt; Removed 7 replicates in total.</span></code></pre></div>
-<p>Remove weak positions with less than 1 interaction in average (1 is the default value):</p>
+<code class="sourceCode R"><span><span class="va">hic.experiment</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/filterSparseReplicates.html">filterSparseReplicates</a></span><span class="op">(</span><span class="va">hic.experiment</span>, threshold <span class="op">=</span> <span class="fl">0.3</span><span class="op">)</span></span>
+<span><span class="co">#&gt; Keeping replicates filled with at least 30% non-zero interactions.</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; Removed interactions matrix of chromosome X, condition 1, replicate R2 filled at 2.347%.</span></span>
+<span><span class="co">#&gt; Removed 1 replicate in total.</span></span></code></pre></div>
+<p>Remove weak positions with less than 1 interaction in average (1 is
+the default value):</p>
 <div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">hic.experiment</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/filterWeakPositions.html">filterWeakPositions</a></span><span class="op">(</span><span class="va">hic.experiment</span>, threshold <span class="op">=</span> <span class="fl">1</span><span class="op">)</span>
-<span class="co">#&gt; Keeping positions with interactions average greater or equal to 1.</span>
-<span class="co">#&gt; Chromosome X: 2 positions removed, 118 positions remaining.</span>
-<span class="co">#&gt; Chromosome Y: 3 positions removed, 157 positions remaining.</span>
-<span class="co">#&gt; Chromosome Z: 0 positions removed, 200 positions remaining.</span>
-<span class="co">#&gt; Removed 5 positions in total.</span></code></pre></div>
+<code class="sourceCode R"><span><span class="va">hic.experiment</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/filterWeakPositions.html">filterWeakPositions</a></span><span class="op">(</span><span class="va">hic.experiment</span>, threshold <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span>
+<span><span class="co">#&gt; Keeping positions with interactions average greater or equal to 1.</span></span>
+<span><span class="co">#&gt; Chromosome X: 2 positions removed, 118 positions remaining.</span></span>
+<span><span class="co">#&gt; Chromosome Y: 3 positions removed, 157 positions remaining.</span></span>
+<span><span class="co">#&gt; Chromosome Z: 0 positions removed, 200 positions remaining.</span></span>
+<span><span class="co">#&gt; Removed 5 positions in total.</span></span></code></pre></div>
 </div>
-<div id="normalizing-biases" class="section level3">
-<h3 class="hasAnchor">
-<a href="#normalizing-biases" class="anchor"></a>Normalizing biases</h3>
-<p>Normalize technical biases such as sequencing depth (inter-matrix normalization):</p>
+<div class="section level3">
+<h3 id="normalizing-biases">Normalizing biases<a class="anchor" aria-label="anchor" href="#normalizing-biases"></a>
+</h3>
+<div class="section level4">
+<h4 id="technical-biases">Technical biases<a class="anchor" aria-label="anchor" href="#technical-biases"></a>
+</h4>
+<p>Normalize technical biases such as sequencing depth (inter-matrix
+normalization) so that matrices are comparable :</p>
 <div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
-<code class="sourceCode R">  <span class="va">hic.experiment</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/normalizeTechnicalBiases.html">normalizeTechnicalBiases</a></span><span class="op">(</span><span class="va">hic.experiment</span><span class="op">)</span>
-<span class="co">#&gt; Normalizing technical biases.</span></code></pre></div>
-<p>Normalize biological biases, such as GC content, number of restriction sites, etc. (intra-matrix normalization):</p>
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/warning.html" class="external-link">suppressWarnings</a></span><span class="op">(</span><span class="va">hic.experiment</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/normalizeTechnicalBiases.html">normalizeTechnicalBiases</a></span><span class="op">(</span><span class="va">hic.experiment</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="co">#&gt; Normalizing technical biases.</span></span></code></pre></div>
+<p>This normalization uses uses cyclic loess normalization from
+[multiHiCcompare package] <span class="citation">(Stansfield et al.
+2019)</span>. <strong>Note</strong> : For large dataset, it is highly
+recommended to set a value for <code>cycleLoessSpan</code> parameter to
+reduce computing time and necessary memory. See
+<code><a href="../reference/normalizeTechnicalBiases.html">?HiCDOC::normalizeTechnicalBiases</a></code></p>
+</div>
+<div class="section level4">
+<h4 id="biological-biases">Biological biases<a class="anchor" aria-label="anchor" href="#biological-biases"></a>
+</h4>
+<p>Normalize biological biases, such as GC content, number of
+restriction sites, etc. (intra-matrix normalization):</p>
 <div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">hic.experiment</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/normalizeBiologicalBiases.html">normalizeBiologicalBiases</a></span><span class="op">(</span><span class="va">hic.experiment</span><span class="op">)</span>
-<span class="co">#&gt; Chromosome X: normalizing biological biases.</span>
-<span class="co">#&gt; Chromosome Y: normalizing biological biases.</span>
-<span class="co">#&gt; Chromosome Z: normalizing biological biases.</span></code></pre></div>
-<p>Normalize the linear distance effect resulting from more interactions between closer genomic regions (20000 is the default value for <code>loessSampleSize</code>):</p>
+<code class="sourceCode R"><span><span class="va">hic.experiment</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/normalizeBiologicalBiases.html">normalizeBiologicalBiases</a></span><span class="op">(</span><span class="va">hic.experiment</span><span class="op">)</span></span>
+<span><span class="co">#&gt; Chromosome X: normalizing biological biases.</span></span>
+<span><span class="co">#&gt; Chromosome Y: normalizing biological biases.</span></span>
+<span><span class="co">#&gt; Chromosome Z: normalizing biological biases.</span></span></code></pre></div>
+</div>
+<div class="section level4">
+<h4 id="distance-effect">Distance effect<a class="anchor" aria-label="anchor" href="#distance-effect"></a>
+</h4>
+<p>Normalize the linear distance effect resulting from more interactions
+between closer genomic regions (20000 is the default value for
+<code>loessSampleSize</code>):</p>
 <div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
-<code class="sourceCode R">  <span class="va">hic.experiment</span> <span class="op">&lt;-</span> 
-    <span class="fu"><a href="../reference/normalizeDistanceEffect.html">normalizeDistanceEffect</a></span><span class="op">(</span><span class="va">hic.experiment</span>, loessSampleSize <span class="op">=</span> <span class="fl">20000</span><span class="op">)</span>
-<span class="co">#&gt; Chromosome X: normalizing distance effect.</span>
-<span class="co">#&gt; Chromosome Y: normalizing distance effect.</span>
-<span class="co">#&gt; Chromosome Z: normalizing distance effect.</span></code></pre></div>
+<code class="sourceCode R"><span><span class="va">hic.experiment</span> <span class="op">&lt;-</span> </span>
+<span>    <span class="fu"><a href="../reference/normalizeDistanceEffect.html">normalizeDistanceEffect</a></span><span class="op">(</span><span class="va">hic.experiment</span>, loessSampleSize <span class="op">=</span> <span class="fl">20000</span><span class="op">)</span></span>
+<span><span class="co">#&gt; Chromosome X: normalizing distance effect.</span></span>
+<span><span class="co">#&gt; Chromosome Y: normalizing distance effect.</span></span>
+<span><span class="co">#&gt; Chromosome Z: normalizing distance effect.</span></span></code></pre></div>
 </div>
-<div id="predicting-compartments-and-differences" class="section level3">
-<h3 class="hasAnchor">
-<a href="#predicting-compartments-and-differences" class="anchor"></a>Predicting compartments and differences</h3>
-<p>Predict A and B compartments and detect significant differences, here using the default values as parameters:</p>
+</div>
+<div class="section level3">
+<h3 id="predicting-compartments-and-differences">Predicting compartments and differences<a class="anchor" aria-label="anchor" href="#predicting-compartments-and-differences"></a>
+</h3>
+<p>Predict A and B compartments and detect significant differences, here
+using the default values as parameters:</p>
 <div class="sourceCode" id="cb15"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">hic.experiment</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/detectCompartments.html">detectCompartments</a></span><span class="op">(</span>
-    <span class="va">hic.experiment</span>,
-    kMeansDelta <span class="op">=</span> <span class="fl">0.0001</span>,
-    kMeansIterations <span class="op">=</span> <span class="fl">50</span>,
-    kMeansRestarts <span class="op">=</span> <span class="fl">20</span>
-<span class="op">)</span>
-<span class="co">#&gt; Clustering genomic positions.</span>
-<span class="co">#&gt; Predicting A/B compartments.</span>
-<span class="co">#&gt; Detecting significant differences.</span></code></pre></div>
+<code class="sourceCode R"><span><span class="va">hic.experiment</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/detectCompartments.html">detectCompartments</a></span><span class="op">(</span><span class="va">hic.experiment</span><span class="op">)</span></span>
+<span><span class="co">#&gt; Clustering genomic positions.</span></span>
+<span><span class="co">#&gt; Predicting A/B compartments.</span></span>
+<span><span class="co">#&gt; Detecting significant differences.</span></span></code></pre></div>
 </div>
 </div>
-<div id="visualizing-data-and-results" class="section level2">
-<h2 class="hasAnchor">
-<a href="#visualizing-data-and-results" class="anchor"></a>Visualizing data and results</h2>
+<div class="section level2">
+<h2 id="visualizing-data-and-results">Visualizing data and results<a class="anchor" aria-label="anchor" href="#visualizing-data-and-results"></a>
+</h2>
 <p>Plot the interaction matrix of each replicate:</p>
 <div class="sourceCode" id="cb16"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="../reference/plotInteractions.html">plotInteractions</a></span><span class="op">(</span><span class="va">hic.experiment</span>, chromosome <span class="op">=</span> <span class="st">"Y"</span><span class="op">)</span></code></pre></div>
-<p><img src="HiCDOC_files/figure-html/plotInteractions-1.png" width="700"></p>
-<p>Plot the overall distance effect on the proportion of interactions:</p>
+<code class="sourceCode R"><span><span class="va">p</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/plotInteractions.html">plotInteractions</a></span><span class="op">(</span><span class="va">hic.experiment</span>, chromosome <span class="op">=</span> <span class="st">"Y"</span><span class="op">)</span></span>
+<span><span class="va">p</span></span></code></pre></div>
+<p><img src="HiCDOC_files/figure-html/plotInteractions-1.png" class="r-plt" alt="" width="700"></p>
+<p>Plot the overall distance effect on the proportion of
+interactions:</p>
 <div class="sourceCode" id="cb17"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="../reference/plotDistanceEffect.html">plotDistanceEffect</a></span><span class="op">(</span><span class="va">hic.experiment</span><span class="op">)</span>
-<span class="co">#&gt; `geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = "cs")'</span>
-<span class="co">#&gt; `geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = "cs")'</span>
-<span class="co">#&gt; `geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = "cs")'</span></code></pre></div>
-<p><img src="HiCDOC_files/figure-html/plotDistanceEffect-1.png" width="700"></p>
-<p>List and plot compartments with their concordance (confidence measure) in each replicate, and significant changes between experiment conditions:</p>
+<code class="sourceCode R"><span><span class="va">p</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/plotDistanceEffect.html">plotDistanceEffect</a></span><span class="op">(</span><span class="va">hic.experiment</span><span class="op">)</span></span>
+<span><span class="co">#&gt; `stat_bin2d()` using `bins = 30`. Pick better value `binwidth`.</span></span>
+<span><span class="co">#&gt; `geom_smooth()` using method = 'gam' and formula = 'y ~ s(x, bs = "cs")'</span></span>
+<span><span class="co">#&gt; `stat_bin()` using `bins = 30`. Pick better value `binwidth`.</span></span>
+<span><span class="co">#&gt; `stat_bin2d()` using `bins = 30`. Pick better value `binwidth`.</span></span>
+<span><span class="co">#&gt; `geom_smooth()` using method = 'gam' and formula = 'y ~ s(x, bs = "cs")'</span></span>
+<span><span class="va">p</span></span></code></pre></div>
+<p><img src="HiCDOC_files/figure-html/plotDistanceEffect-1.png" class="r-plt" alt="" width="700"></p>
+<p>List and plot compartments with their concordance (confidence
+measure) in each replicate, and significant changes between experiment
+conditions:</p>
 <div class="sourceCode" id="cb18"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="../reference/HiCDOCDataSet-methods.html">compartments</a></span><span class="op">(</span><span class="va">hic.experiment</span><span class="op">)</span>
-<span class="co">#&gt; GRanges object with 91 ranges and 2 metadata columns:</span>
-<span class="co">#&gt;        seqnames      ranges strand | condition compartment</span>
-<span class="co">#&gt;           &lt;Rle&gt;   &lt;IRanges&gt;  &lt;Rle&gt; |  &lt;factor&gt;    &lt;factor&gt;</span>
-<span class="co">#&gt;    [1]        X      0-2328      * |         1           B</span>
-<span class="co">#&gt;    [2]        X   2329-3972      * |         1           A</span>
-<span class="co">#&gt;    [3]        X   3973-4794      * |         1           B</span>
-<span class="co">#&gt;    [4]        X   4795-6575      * |         1           A</span>
-<span class="co">#&gt;    [5]        X   6576-7808      * |         1           B</span>
-<span class="co">#&gt;    ...      ...         ...    ... .       ...         ...</span>
-<span class="co">#&gt;   [87]        Z 15207-16987      * |         1           B</span>
-<span class="co">#&gt;   [88]        Z 16988-23015      * |         1           A</span>
-<span class="co">#&gt;   [89]        Z 23016-25344      * |         1           B</span>
-<span class="co">#&gt;   [90]        Z 25345-26166      * |         1           A</span>
-<span class="co">#&gt;   [91]        Z 26167-27399      * |         1           B</span>
-<span class="co">#&gt;   -------</span>
-<span class="co">#&gt;   seqinfo: 3 sequences from an unspecified genome; no seqlengths</span>
-<span class="fu"><a href="../reference/HiCDOCDataSet-methods.html">concordances</a></span><span class="op">(</span><span class="va">hic.experiment</span><span class="op">)</span>
-<span class="co">#&gt; GRanges object with 2089 ranges and 4 metadata columns:</span>
-<span class="co">#&gt;          seqnames      ranges strand | condition replicate compartment</span>
-<span class="co">#&gt;             &lt;Rle&gt;   &lt;IRanges&gt;  &lt;Rle&gt; |  &lt;factor&gt;  &lt;factor&gt;    &lt;factor&gt;</span>
-<span class="co">#&gt;      [1]        X       0-136      * |         1        R1           B</span>
-<span class="co">#&gt;      [2]        X     137-273      * |         1        R1           B</span>
-<span class="co">#&gt;      [3]        X     274-410      * |         1        R1           B</span>
-<span class="co">#&gt;      [4]        X     411-547      * |         1        R1           B</span>
-<span class="co">#&gt;      [5]        X     548-684      * |         1        R1           B</span>
-<span class="co">#&gt;      ...      ...         ...    ... .       ...       ...         ...</span>
-<span class="co">#&gt;   [2085]        Z 26715-26851      * |         1        R3           B</span>
-<span class="co">#&gt;   [2086]        Z 26852-26988      * |         1        R3           B</span>
-<span class="co">#&gt;   [2087]        Z 26989-27125      * |         1        R3           B</span>
-<span class="co">#&gt;   [2088]        Z 27126-27262      * |         1        R3           B</span>
-<span class="co">#&gt;   [2089]        Z 27263-27399      * |         1        R3           B</span>
-<span class="co">#&gt;          concordance</span>
-<span class="co">#&gt;            &lt;numeric&gt;</span>
-<span class="co">#&gt;      [1]   0.0137133</span>
-<span class="co">#&gt;      [2]   0.0161103</span>
-<span class="co">#&gt;      [3]   0.0188770</span>
-<span class="co">#&gt;      [4]   0.0139651</span>
-<span class="co">#&gt;      [5]   0.0195456</span>
-<span class="co">#&gt;      ...         ...</span>
-<span class="co">#&gt;   [2085]   0.0225031</span>
-<span class="co">#&gt;   [2086]   0.0239831</span>
-<span class="co">#&gt;   [2087]   0.0182602</span>
-<span class="co">#&gt;   [2088]   0.0249476</span>
-<span class="co">#&gt;   [2089]   0.0215806</span>
-<span class="co">#&gt;   -------</span>
-<span class="co">#&gt;   seqinfo: 3 sequences from an unspecified genome; no seqlengths</span>
-<span class="fu"><a href="../reference/HiCDOCDataSet-methods.html">differences</a></span><span class="op">(</span><span class="va">hic.experiment</span><span class="op">)</span>
-<span class="co">#&gt; GRanges object with 54 ranges and 6 metadata columns:</span>
-<span class="co">#&gt;        seqnames      ranges strand | condition.1 condition.2    pvalue</span>
-<span class="co">#&gt;           &lt;Rle&gt;   &lt;IRanges&gt;  &lt;Rle&gt; |    &lt;factor&gt;    &lt;factor&gt; &lt;numeric&gt;</span>
-<span class="co">#&gt;    [1]        X   1644-1780      * |           1           2         0</span>
-<span class="co">#&gt;    [2]        X   1644-1780      * |           2           3         0</span>
-<span class="co">#&gt;    [3]        X   1781-1917      * |           1           2         0</span>
-<span class="co">#&gt;    [4]        X   1781-1917      * |           2           3         0</span>
-<span class="co">#&gt;    [5]        X   1918-2054      * |           1           2         0</span>
-<span class="co">#&gt;    ...      ...         ...    ... .         ...         ...       ...</span>
-<span class="co">#&gt;   [50]        Y 14659-14795      * |           2           3         0</span>
-<span class="co">#&gt;   [51]        Y 14796-14932      * |           1           3         0</span>
-<span class="co">#&gt;   [52]        Y 14796-14932      * |           2           3         0</span>
-<span class="co">#&gt;   [53]        Y 14933-15069      * |           1           3         0</span>
-<span class="co">#&gt;   [54]        Y 14933-15069      * |           2           3         0</span>
-<span class="co">#&gt;        pvalue.adjusted direction significance</span>
-<span class="co">#&gt;              &lt;numeric&gt;  &lt;factor&gt;  &lt;character&gt;</span>
-<span class="co">#&gt;    [1]               0      B-&gt;A         ****</span>
-<span class="co">#&gt;    [2]               0      A-&gt;B         ****</span>
-<span class="co">#&gt;    [3]               0      B-&gt;A         ****</span>
-<span class="co">#&gt;    [4]               0      A-&gt;B         ****</span>
-<span class="co">#&gt;    [5]               0      B-&gt;A         ****</span>
-<span class="co">#&gt;    ...             ...       ...          ...</span>
-<span class="co">#&gt;   [50]               0      A-&gt;B         ****</span>
-<span class="co">#&gt;   [51]               0      A-&gt;B         ****</span>
-<span class="co">#&gt;   [52]               0      A-&gt;B         ****</span>
-<span class="co">#&gt;   [53]               0      A-&gt;B         ****</span>
-<span class="co">#&gt;   [54]               0      A-&gt;B         ****</span>
-<span class="co">#&gt;   -------</span>
-<span class="co">#&gt;   seqinfo: 3 sequences from an unspecified genome; no seqlengths</span>
-<span class="fu"><a href="../reference/plotCompartmentChanges.html">plotCompartmentChanges</a></span><span class="op">(</span><span class="va">hic.experiment</span>, chromosome <span class="op">=</span> <span class="st">"Y"</span><span class="op">)</span></code></pre></div>
-<p><img src="HiCDOC_files/figure-html/extractcomponents-1.png" width="700"></p>
-<p>Plot the overall distribution of concordance differences:</p>
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/HiCDOCDataSet-methods.html">compartments</a></span><span class="op">(</span><span class="va">hic.experiment</span><span class="op">)</span></span>
+<span><span class="co">#&gt; GRanges object with 1025 ranges and 6 metadata columns:</span></span>
+<span><span class="co">#&gt;          seqnames      ranges strand |     index condition compartment</span></span>
+<span><span class="co">#&gt;             &lt;Rle&gt;   &lt;IRanges&gt;  &lt;Rle&gt; | &lt;numeric&gt;  &lt;factor&gt;    &lt;factor&gt;</span></span>
+<span><span class="co">#&gt;      [1]        X       1-137      * |        81         1           A</span></span>
+<span><span class="co">#&gt;      [2]        X       1-137      * |        81         2           A</span></span>
+<span><span class="co">#&gt;      [3]        X       1-137      * |        81         3           A</span></span>
+<span><span class="co">#&gt;      [4]        X     138-274      * |        82         1           A</span></span>
+<span><span class="co">#&gt;      [5]        X     138-274      * |        82         2           A</span></span>
+<span><span class="co">#&gt;      ...      ...         ...    ... .       ...       ...         ...</span></span>
+<span><span class="co">#&gt;   [1021]        Z 26716-26852      * |       556         1           A</span></span>
+<span><span class="co">#&gt;   [1022]        Z 26853-26989      * |       557         1           A</span></span>
+<span><span class="co">#&gt;   [1023]        Z 26990-27126      * |       558         1           A</span></span>
+<span><span class="co">#&gt;   [1024]        Z 27127-27263      * |       559         1           A</span></span>
+<span><span class="co">#&gt;   [1025]        Z 27264-27400      * |       560         1           A</span></span>
+<span><span class="co">#&gt;          centroid.check PC1.check assignment.check</span></span>
+<span><span class="co">#&gt;               &lt;logical&gt; &lt;logical&gt;        &lt;logical&gt;</span></span>
+<span><span class="co">#&gt;      [1]           TRUE      TRUE             TRUE</span></span>
+<span><span class="co">#&gt;      [2]           TRUE      TRUE             TRUE</span></span>
+<span><span class="co">#&gt;      [3]           TRUE      TRUE             TRUE</span></span>
+<span><span class="co">#&gt;      [4]           TRUE      TRUE             TRUE</span></span>
+<span><span class="co">#&gt;      [5]           TRUE      TRUE             TRUE</span></span>
+<span><span class="co">#&gt;      ...            ...       ...              ...</span></span>
+<span><span class="co">#&gt;   [1021]           TRUE      TRUE             TRUE</span></span>
+<span><span class="co">#&gt;   [1022]           TRUE      TRUE             TRUE</span></span>
+<span><span class="co">#&gt;   [1023]           TRUE      TRUE             TRUE</span></span>
+<span><span class="co">#&gt;   [1024]           TRUE      TRUE             TRUE</span></span>
+<span><span class="co">#&gt;   [1025]           TRUE      TRUE             TRUE</span></span>
+<span><span class="co">#&gt;   -------</span></span>
+<span><span class="co">#&gt;   seqinfo: 3 sequences from an unspecified genome; no seqlengths</span></span></code></pre></div>
 <div class="sourceCode" id="cb19"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="../reference/plotConcordanceDifferences.html">plotConcordanceDifferences</a></span><span class="op">(</span><span class="va">hic.experiment</span><span class="op">)</span>
-<span class="co">#&gt; `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</span></code></pre></div>
-<p><img src="HiCDOC_files/figure-html/plotConcordanceDifferences-1.png" width="700"></p>
-<p>Plot the result of the PCA on the compartments’ centroids:</p>
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/HiCDOCDataSet-methods.html">concordances</a></span><span class="op">(</span><span class="va">hic.experiment</span><span class="op">)</span></span>
+<span><span class="co">#&gt; GRanges object with 2089 ranges and 5 metadata columns:</span></span>
+<span><span class="co">#&gt;          seqnames      ranges strand |     index condition replicate</span></span>
+<span><span class="co">#&gt;             &lt;Rle&gt;   &lt;IRanges&gt;  &lt;Rle&gt; | &lt;numeric&gt;  &lt;factor&gt;  &lt;factor&gt;</span></span>
+<span><span class="co">#&gt;      [1]        X       1-137      * |        81         1        R1</span></span>
+<span><span class="co">#&gt;      [2]        X       1-137      * |        81         1        R3</span></span>
+<span><span class="co">#&gt;      [3]        X       1-137      * |        81         2        R2</span></span>
+<span><span class="co">#&gt;      [4]        X       1-137      * |        81         3        R1</span></span>
+<span><span class="co">#&gt;      [5]        X       1-137      * |        81         3        R2</span></span>
+<span><span class="co">#&gt;      ...      ...         ...    ... .       ...       ...       ...</span></span>
+<span><span class="co">#&gt;   [2085]        Z 26990-27126      * |       558         1        R3</span></span>
+<span><span class="co">#&gt;   [2086]        Z 27127-27263      * |       559         1        R2</span></span>
+<span><span class="co">#&gt;   [2087]        Z 27127-27263      * |       559         1        R3</span></span>
+<span><span class="co">#&gt;   [2088]        Z 27264-27400      * |       560         1        R2</span></span>
+<span><span class="co">#&gt;   [2089]        Z 27264-27400      * |       560         1        R3</span></span>
+<span><span class="co">#&gt;          compartment concordance</span></span>
+<span><span class="co">#&gt;             &lt;factor&gt;   &lt;numeric&gt;</span></span>
+<span><span class="co">#&gt;      [1]           A  -0.0141840</span></span>
+<span><span class="co">#&gt;      [2]           A  -0.0135961</span></span>
+<span><span class="co">#&gt;      [3]           B  -0.0203824</span></span>
+<span><span class="co">#&gt;      [4]           B  -0.0163755</span></span>
+<span><span class="co">#&gt;      [5]           B  -0.0164159</span></span>
+<span><span class="co">#&gt;      ...         ...         ...</span></span>
+<span><span class="co">#&gt;   [2085]           A  -0.0213796</span></span>
+<span><span class="co">#&gt;   [2086]           A  -0.0211539</span></span>
+<span><span class="co">#&gt;   [2087]           A  -0.0256941</span></span>
+<span><span class="co">#&gt;   [2088]           A  -0.0220387</span></span>
+<span><span class="co">#&gt;   [2089]           A  -0.0229382</span></span>
+<span><span class="co">#&gt;   -------</span></span>
+<span><span class="co">#&gt;   seqinfo: 3 sequences from an unspecified genome; no seqlengths</span></span></code></pre></div>
 <div class="sourceCode" id="cb20"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="../reference/plotCentroids.html">plotCentroids</a></span><span class="op">(</span><span class="va">hic.experiment</span>, chromosome <span class="op">=</span> <span class="st">"Y"</span><span class="op">)</span></code></pre></div>
-<p><img src="HiCDOC_files/figure-html/plotCentroids-1.png" width="700"></p>
-<p>Plot the boxplots of self interaction ratios (differences between self interactions and the median of other interactions) of each compartment:</p>
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/HiCDOCDataSet-methods.html">differences</a></span><span class="op">(</span><span class="va">hic.experiment</span><span class="op">)</span></span>
+<span><span class="co">#&gt; GRanges object with 54 ranges and 10 metadata columns:</span></span>
+<span><span class="co">#&gt;        seqnames      ranges strand |     index condition.1 condition.2</span></span>
+<span><span class="co">#&gt;           &lt;Rle&gt;   &lt;IRanges&gt;  &lt;Rle&gt; | &lt;numeric&gt;    &lt;factor&gt;    &lt;factor&gt;</span></span>
+<span><span class="co">#&gt;    [1]        X   1645-1781      * |        93           1           2</span></span>
+<span><span class="co">#&gt;    [2]        X   1645-1781      * |        93           2           3</span></span>
+<span><span class="co">#&gt;    [3]        X   1782-1918      * |        94           1           2</span></span>
+<span><span class="co">#&gt;    [4]        X   1782-1918      * |        94           2           3</span></span>
+<span><span class="co">#&gt;    [5]        X   1919-2055      * |        95           1           2</span></span>
+<span><span class="co">#&gt;    ...      ...         ...    ... .       ...         ...         ...</span></span>
+<span><span class="co">#&gt;   [50]        Y 14660-14796      * |       308           2           3</span></span>
+<span><span class="co">#&gt;   [51]        Y 14797-14933      * |       309           1           3</span></span>
+<span><span class="co">#&gt;   [52]        Y 14797-14933      * |       309           2           3</span></span>
+<span><span class="co">#&gt;   [53]        Y 14934-15070      * |       310           1           3</span></span>
+<span><span class="co">#&gt;   [54]        Y 14934-15070      * |       310           2           3</span></span>
+<span><span class="co">#&gt;           pvalue pvalue.adjusted direction significance centroid.check</span></span>
+<span><span class="co">#&gt;        &lt;numeric&gt;       &lt;numeric&gt;  &lt;factor&gt;  &lt;character&gt;      &lt;logical&gt;</span></span>
+<span><span class="co">#&gt;    [1]         0               0      A-&gt;B         ****           TRUE</span></span>
+<span><span class="co">#&gt;    [2]         0               0      B-&gt;A         ****           TRUE</span></span>
+<span><span class="co">#&gt;    [3]         0               0      A-&gt;B         ****           TRUE</span></span>
+<span><span class="co">#&gt;    [4]         0               0      B-&gt;A         ****           TRUE</span></span>
+<span><span class="co">#&gt;    [5]         0               0      A-&gt;B         ****           TRUE</span></span>
+<span><span class="co">#&gt;    ...       ...             ...       ...          ...            ...</span></span>
+<span><span class="co">#&gt;   [50]         0               0      B-&gt;A         ****           TRUE</span></span>
+<span><span class="co">#&gt;   [51]         0               0      B-&gt;A         ****           TRUE</span></span>
+<span><span class="co">#&gt;   [52]         0               0      B-&gt;A         ****           TRUE</span></span>
+<span><span class="co">#&gt;   [53]         0               0      B-&gt;A         ****           TRUE</span></span>
+<span><span class="co">#&gt;   [54]         0               0      B-&gt;A         ****           TRUE</span></span>
+<span><span class="co">#&gt;        PC1.check assignment.check</span></span>
+<span><span class="co">#&gt;        &lt;logical&gt;        &lt;logical&gt;</span></span>
+<span><span class="co">#&gt;    [1]      TRUE             TRUE</span></span>
+<span><span class="co">#&gt;    [2]      TRUE             TRUE</span></span>
+<span><span class="co">#&gt;    [3]      TRUE             TRUE</span></span>
+<span><span class="co">#&gt;    [4]      TRUE             TRUE</span></span>
+<span><span class="co">#&gt;    [5]      TRUE             TRUE</span></span>
+<span><span class="co">#&gt;    ...       ...              ...</span></span>
+<span><span class="co">#&gt;   [50]      TRUE             TRUE</span></span>
+<span><span class="co">#&gt;   [51]      TRUE             TRUE</span></span>
+<span><span class="co">#&gt;   [52]      TRUE             TRUE</span></span>
+<span><span class="co">#&gt;   [53]      TRUE             TRUE</span></span>
+<span><span class="co">#&gt;   [54]      TRUE             TRUE</span></span>
+<span><span class="co">#&gt;   -------</span></span>
+<span><span class="co">#&gt;   seqinfo: 3 sequences from an unspecified genome; no seqlengths</span></span></code></pre></div>
 <div class="sourceCode" id="cb21"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="../reference/plotSelfInteractionRatios.html">plotSelfInteractionRatios</a></span><span class="op">(</span><span class="va">hic.experiment</span>, chromosome <span class="op">=</span> <span class="st">"Y"</span><span class="op">)</span></code></pre></div>
-<p><img src="HiCDOC_files/figure-html/plotSelfInteractionRatios-1.png" width="700"></p>
-</div>
-</div>
-<div id="session-info" class="section level1">
-<h1 class="hasAnchor">
-<a href="#session-info" class="anchor"></a>Session info</h1>
+<code class="sourceCode R"><span><span class="va">p</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/plotCompartmentChanges.html">plotCompartmentChanges</a></span><span class="op">(</span><span class="va">hic.experiment</span>, chromosome <span class="op">=</span> <span class="st">"Y"</span><span class="op">)</span></span>
+<span><span class="va">p</span></span></code></pre></div>
+<p><img src="HiCDOC_files/figure-html/plotCompartmentChanges-1.png" class="r-plt" alt="" width="700"></p>
+<p>Plot the overall distribution of concordance differences:</p>
 <div class="sourceCode" id="cb22"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/sessionInfo.html">sessionInfo</a></span><span class="op">(</span><span class="op">)</span>
-<span class="co">#&gt; R version 4.1.0 (2021-05-18)</span>
-<span class="co">#&gt; Platform: x86_64-pc-linux-gnu (64-bit)</span>
-<span class="co">#&gt; Running under: Ubuntu 18.04.5 LTS</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt; Matrix products: default</span>
-<span class="co">#&gt; BLAS:   /usr/lib/x86_64-linux-gnu/openblas/libblas.so.3</span>
-<span class="co">#&gt; LAPACK: /usr/lib/x86_64-linux-gnu/libopenblasp-r0.2.20.so</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt; locale:</span>
-<span class="co">#&gt;  [1] LC_CTYPE=fr_FR.UTF-8       LC_NUMERIC=C              </span>
-<span class="co">#&gt;  [3] LC_TIME=fr_FR.UTF-8        LC_COLLATE=fr_FR.UTF-8    </span>
-<span class="co">#&gt;  [5] LC_MONETARY=fr_FR.UTF-8    LC_MESSAGES=fr_FR.UTF-8   </span>
-<span class="co">#&gt;  [7] LC_PAPER=fr_FR.UTF-8       LC_NAME=C                 </span>
-<span class="co">#&gt;  [9] LC_ADDRESS=C               LC_TELEPHONE=C            </span>
-<span class="co">#&gt; [11] LC_MEASUREMENT=fr_FR.UTF-8 LC_IDENTIFICATION=C       </span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt; attached base packages:</span>
-<span class="co">#&gt; [1] stats     graphics  grDevices utils     datasets  methods   base     </span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt; other attached packages:</span>
-<span class="co">#&gt; [1] HiCDOC_0.99.10   BiocStyle_2.20.2</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt; loaded via a namespace (and not attached):</span>
-<span class="co">#&gt;   [1] readxl_1.3.1                backports_1.2.1            </span>
-<span class="co">#&gt;   [3] qqman_0.1.8                 systemfonts_1.0.2          </span>
-<span class="co">#&gt;   [5] splines_4.1.0               BiocParallel_1.26.0        </span>
-<span class="co">#&gt;   [7] listenv_0.8.0               GenomeInfoDb_1.28.0        </span>
-<span class="co">#&gt;   [9] ggplot2_3.3.4               CGHcall_2.54.0             </span>
-<span class="co">#&gt;  [11] digest_0.6.27               htmltools_0.5.1.1          </span>
-<span class="co">#&gt;  [13] fansi_0.5.0                 magrittr_2.0.1             </span>
-<span class="co">#&gt;  [15] memoise_2.0.0               InteractionSet_1.20.0      </span>
-<span class="co">#&gt;  [17] openxlsx_4.2.3              limma_3.48.0               </span>
-<span class="co">#&gt;  [19] globals_0.14.0              Biostrings_2.60.1          </span>
-<span class="co">#&gt;  [21] matrixStats_0.59.0          R.utils_2.10.1             </span>
-<span class="co">#&gt;  [23] pkgdown_1.6.1               colorspace_2.0-1           </span>
-<span class="co">#&gt;  [25] textshaping_0.3.5           haven_2.4.1                </span>
-<span class="co">#&gt;  [27] xfun_0.23                   dplyr_1.0.6                </span>
-<span class="co">#&gt;  [29] crayon_1.4.1                RCurl_1.98-1.3             </span>
-<span class="co">#&gt;  [31] jsonlite_1.7.2              impute_1.66.0              </span>
-<span class="co">#&gt;  [33] glue_1.4.2                  gtable_0.3.0               </span>
-<span class="co">#&gt;  [35] zlibbioc_1.38.0             XVector_0.32.0             </span>
-<span class="co">#&gt;  [37] DelayedArray_0.18.0         car_3.0-10                 </span>
-<span class="co">#&gt;  [39] Rhdf5lib_1.14.1             future.apply_1.7.0         </span>
-<span class="co">#&gt;  [41] HiCcompare_1.14.0           BiocGenerics_0.38.0        </span>
-<span class="co">#&gt;  [43] abind_1.4-5                 scales_1.1.1               </span>
-<span class="co">#&gt;  [45] pheatmap_1.0.12             DBI_1.1.1                  </span>
-<span class="co">#&gt;  [47] CGHbase_1.52.0              edgeR_3.34.0               </span>
-<span class="co">#&gt;  [49] rstatix_0.7.0               miniUI_0.1.1.1             </span>
-<span class="co">#&gt;  [51] Rcpp_1.0.6                  xtable_1.8-4               </span>
-<span class="co">#&gt;  [53] foreign_0.8-81              stats4_4.1.0               </span>
-<span class="co">#&gt;  [55] RColorBrewer_1.1-2          calibrate_1.7.7            </span>
-<span class="co">#&gt;  [57] ellipsis_0.3.2              multiHiCcompare_1.10.0     </span>
-<span class="co">#&gt;  [59] pkgconfig_2.0.3             R.methodsS3_1.8.1          </span>
-<span class="co">#&gt;  [61] farver_2.1.0                sass_0.4.0                 </span>
-<span class="co">#&gt;  [63] locfit_1.5-9.4              utf8_1.2.1                 </span>
-<span class="co">#&gt;  [65] DNAcopy_1.66.0              tidyselect_1.1.1           </span>
-<span class="co">#&gt;  [67] labeling_0.4.2              rlang_0.4.11               </span>
-<span class="co">#&gt;  [69] later_1.2.0                 cellranger_1.1.0           </span>
-<span class="co">#&gt;  [71] munsell_0.5.0               tools_4.1.0                </span>
-<span class="co">#&gt;  [73] cachem_1.0.5                generics_0.1.0             </span>
-<span class="co">#&gt;  [75] broom_0.7.7                 evaluate_0.14              </span>
-<span class="co">#&gt;  [77] stringr_1.4.0               fastmap_1.1.0              </span>
-<span class="co">#&gt;  [79] yaml_2.2.1                  ragg_1.1.3                 </span>
-<span class="co">#&gt;  [81] knitr_1.33                  fs_1.5.0                   </span>
-<span class="co">#&gt;  [83] zip_2.2.0                   purrr_0.3.4                </span>
-<span class="co">#&gt;  [85] pbapply_1.4-3               future_1.21.0              </span>
-<span class="co">#&gt;  [87] nlme_3.1-152                mime_0.10                  </span>
-<span class="co">#&gt;  [89] R.oo_1.24.0                 ggExtra_0.9                </span>
-<span class="co">#&gt;  [91] compiler_4.1.0              curl_4.3.1                 </span>
-<span class="co">#&gt;  [93] ggsignif_0.6.2              marray_1.70.0              </span>
-<span class="co">#&gt;  [95] tibble_3.1.2                bslib_0.2.5.1              </span>
-<span class="co">#&gt;  [97] stringi_1.6.2               QDNAseq_1.28.0             </span>
-<span class="co">#&gt;  [99] highr_0.9                   desc_1.3.0                 </span>
-<span class="co">#&gt; [101] forcats_0.5.1               lattice_0.20-44            </span>
-<span class="co">#&gt; [103] Matrix_1.3-4                vctrs_0.3.8                </span>
-<span class="co">#&gt; [105] pillar_1.6.1                lifecycle_1.0.0            </span>
-<span class="co">#&gt; [107] rhdf5filters_1.4.0          BiocManager_1.30.15        </span>
-<span class="co">#&gt; [109] jquerylib_0.1.4             cowplot_1.1.1              </span>
-<span class="co">#&gt; [111] data.table_1.14.0           bitops_1.0-7               </span>
-<span class="co">#&gt; [113] httpuv_1.6.1                GenomicRanges_1.44.0       </span>
-<span class="co">#&gt; [115] R6_2.5.0                    bookdown_0.23              </span>
-<span class="co">#&gt; [117] promises_1.2.0.1            KernSmooth_2.23-20         </span>
-<span class="co">#&gt; [119] gridExtra_2.3               rio_0.5.26                 </span>
-<span class="co">#&gt; [121] IRanges_2.26.0              parallelly_1.26.0          </span>
-<span class="co">#&gt; [123] codetools_0.2-18            MASS_7.3-54                </span>
-<span class="co">#&gt; [125] gtools_3.9.2                assertthat_0.2.1           </span>
-<span class="co">#&gt; [127] rhdf5_2.36.0                SummarizedExperiment_1.22.0</span>
-<span class="co">#&gt; [129] rprojroot_2.0.2             withr_2.4.2                </span>
-<span class="co">#&gt; [131] Rsamtools_2.8.0             S4Vectors_0.30.0           </span>
-<span class="co">#&gt; [133] GenomeInfoDbData_1.2.6      mgcv_1.8-36                </span>
-<span class="co">#&gt; [135] parallel_4.1.0              hms_1.1.0                  </span>
-<span class="co">#&gt; [137] grid_4.1.0                  tidyr_1.1.3                </span>
-<span class="co">#&gt; [139] rmarkdown_2.9               carData_3.0-4              </span>
-<span class="co">#&gt; [141] MatrixGenerics_1.4.0        ggpubr_0.4.0               </span>
-<span class="co">#&gt; [143] aggregation_1.0.1           Biobase_2.52.0             </span>
-<span class="co">#&gt; [145] shiny_1.6.0</span></code></pre></div>
+<code class="sourceCode R"><span><span class="va">p</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/plotConcordanceDifferences.html">plotConcordanceDifferences</a></span><span class="op">(</span><span class="va">hic.experiment</span><span class="op">)</span></span>
+<span><span class="va">p</span></span>
+<span><span class="co">#&gt; `stat_bin()` using `bins = 30`. Pick better value `binwidth`.</span></span></code></pre></div>
+<p><img src="HiCDOC_files/figure-html/plotConcordanceDifferences-1.png" class="r-plt" alt="" width="700"></p>
+<p>Plot the result of the PCA on the compartments’ centroids:</p>
+<div class="sourceCode" id="cb23"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">p</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/plotCentroids.html">plotCentroids</a></span><span class="op">(</span><span class="va">hic.experiment</span>, chromosome <span class="op">=</span> <span class="st">"Y"</span><span class="op">)</span></span>
+<span><span class="va">p</span></span></code></pre></div>
+<p><img src="HiCDOC_files/figure-html/plotCentroids-1.png" class="r-plt" alt="" width="700"></p>
+<p>Plot the boxplots of self interaction ratios (differences between
+self interactions and the median of other interactions) of each
+compartment:</p>
+<div class="sourceCode" id="cb24"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">p</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/plotSelfInteractionRatios.html">plotSelfInteractionRatios</a></span><span class="op">(</span><span class="va">hic.experiment</span>, chromosome <span class="op">=</span> <span class="st">"Y"</span><span class="op">)</span></span>
+<span><span class="va">p</span></span></code></pre></div>
+<p><img src="HiCDOC_files/figure-html/plotSelfInteractionRatios-1.png" class="r-plt" alt="" width="700"></p>
+<div class="section level3">
+<h3 id="sanity-checks">Sanity checks<a class="anchor" aria-label="anchor" href="#sanity-checks"></a>
+</h3>
+<p>Sometimes, basic assumptions on the data are not met. We try to
+detect inconsistencies, and warn the user.</p>
+<div class="section level4">
+<h4 id="pca-checks">PCA checks<a class="anchor" aria-label="anchor" href="#pca-checks"></a>
+</h4>
+<p>We perform a principal component analysis on the centroids. Each
+centroid represent an ideal bin, located either on compartment A or B,
+in each sample, and each chromosome. Given a chromosome, if all the
+centroids of the A compartment do not have the same sign on the first
+principal component, we issue a warning for this chromosome. Likewise
+for the B compartment.</p>
+<p>We also check that the inertia on the first principal component is at
+least 75%.</p>
+<p>These checks make sure that centroids of the same compartments do
+cluster together. If the conditions are too different from each other,
+they may cluster together. This case is detected by this check.</p>
 </div>
-<div id="references" class="section level1 unnumbered">
-<h1 class="hasAnchor">
-<a href="#references" class="anchor"></a>References</h1>
+<div class="section level4">
+<h4 id="compartment-assignemnt">Compartment assignemnt<a class="anchor" aria-label="anchor" href="#compartment-assignemnt"></a>
+</h4>
+<p>We use “self-interaction” in order to classify centroids to A and B
+compartments. The self-interaction of a bin is the ratio of the number
+of pairs that link this bin with other bins of the same compartment,
+divided by the number of pairs The self-interactions should be different
+from compartments A and B. We perform a Wilcoxon t-test. If it is not
+significant, then a warning is issued.</p>
+</div>
+<div class="section level4">
+<h4 id="warnings">Warnings<a class="anchor" aria-label="anchor" href="#warnings"></a>
+</h4>
+<p>If at least of the PCA checks fail, the warnings are printed on the
+PCA plot. If the compartment assignment check fail, the warning is
+printed on the corresponding plot.</p>
+<p>When accessing the compartments and the concordances, chromosomes
+which fail to pass the checks are removed (unless the appropriate
+parameter is set).</p>
+</div>
+</div>
+</div>
+<div class="section level2">
+<h2 id="session-info">Session info<a class="anchor" aria-label="anchor" href="#session-info"></a>
+</h2>
+<div class="sourceCode" id="cb25"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/sessionInfo.html" class="external-link">sessionInfo</a></span><span class="op">(</span><span class="op">)</span></span>
+<span><span class="co">#&gt; R version 4.6.0 (2026-04-24)</span></span>
+<span><span class="co">#&gt; Platform: x86_64-pc-linux-gnu</span></span>
+<span><span class="co">#&gt; Running under: Ubuntu 22.04.5 LTS</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; Matrix products: default</span></span>
+<span><span class="co">#&gt; BLAS:   /usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3 </span></span>
+<span><span class="co">#&gt; LAPACK: /usr/lib/x86_64-linux-gnu/openblas-pthread/libopenblasp-r0.3.20.so;  LAPACK version 3.10.0</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; locale:</span></span>
+<span><span class="co">#&gt;  [1] LC_CTYPE=fr_FR.UTF-8       LC_NUMERIC=C              </span></span>
+<span><span class="co">#&gt;  [3] LC_TIME=fr_FR.UTF-8        LC_COLLATE=fr_FR.UTF-8    </span></span>
+<span><span class="co">#&gt;  [5] LC_MONETARY=fr_FR.UTF-8    LC_MESSAGES=fr_FR.UTF-8   </span></span>
+<span><span class="co">#&gt;  [7] LC_PAPER=fr_FR.UTF-8       LC_NAME=C                 </span></span>
+<span><span class="co">#&gt;  [9] LC_ADDRESS=C               LC_TELEPHONE=C            </span></span>
+<span><span class="co">#&gt; [11] LC_MEASUREMENT=fr_FR.UTF-8 LC_IDENTIFICATION=C       </span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; time zone: Europe/Paris</span></span>
+<span><span class="co">#&gt; tzcode source: system (glibc)</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; attached base packages:</span></span>
+<span><span class="co">#&gt; [1] stats4    stats     graphics  grDevices utils     datasets  methods  </span></span>
+<span><span class="co">#&gt; [8] base     </span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; other attached packages:</span></span>
+<span><span class="co">#&gt;  [1] HiCDOC_1.15.0               InteractionSet_1.40.0      </span></span>
+<span><span class="co">#&gt;  [3] SummarizedExperiment_1.42.0 Biobase_2.72.0             </span></span>
+<span><span class="co">#&gt;  [5] MatrixGenerics_1.24.0       matrixStats_1.5.0          </span></span>
+<span><span class="co">#&gt;  [7] GenomicRanges_1.64.0        Seqinfo_1.2.0              </span></span>
+<span><span class="co">#&gt;  [9] IRanges_2.46.0              S4Vectors_0.50.1           </span></span>
+<span><span class="co">#&gt; [11] BiocGenerics_0.58.1         generics_0.1.4             </span></span>
+<span><span class="co">#&gt; [13] BiocStyle_2.40.0           </span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; loaded via a namespace (and not attached):</span></span>
+<span><span class="co">#&gt;  [1] tidyselect_1.2.1        dplyr_1.2.1             farver_2.1.2           </span></span>
+<span><span class="co">#&gt;  [4] S7_0.2.2                fastmap_1.2.0           digest_0.6.39          </span></span>
+<span><span class="co">#&gt;  [7] lifecycle_1.0.5         statmod_1.5.2           HiCcompare_1.34.0      </span></span>
+<span><span class="co">#&gt; [10] magrittr_2.0.5          compiler_4.6.0          rlang_1.2.0            </span></span>
+<span><span class="co">#&gt; [13] sass_0.4.10             tools_4.6.0             yaml_2.3.12            </span></span>
+<span><span class="co">#&gt; [16] calibrate_1.7.7         data.table_1.18.4       knitr_1.51             </span></span>
+<span><span class="co">#&gt; [19] labeling_0.4.3          S4Arrays_1.12.0         htmlwidgets_1.6.4      </span></span>
+<span><span class="co">#&gt; [22] DelayedArray_0.38.2     RColorBrewer_1.1-3      abind_1.4-8            </span></span>
+<span><span class="co">#&gt; [25] BiocParallel_1.46.0     KernSmooth_2.23-26      withr_3.0.2            </span></span>
+<span><span class="co">#&gt; [28] desc_1.4.3              grid_4.6.0              Rhdf5lib_2.0.0         </span></span>
+<span><span class="co">#&gt; [31] edgeR_4.10.1            ggplot2_4.0.3           MASS_7.3-65            </span></span>
+<span><span class="co">#&gt; [34] scales_1.4.0            gtools_3.9.5            cli_3.6.6              </span></span>
+<span><span class="co">#&gt; [37] rmarkdown_2.31          ragg_1.5.2              otel_0.2.0             </span></span>
+<span><span class="co">#&gt; [40] rstudioapi_0.18.0       httr_1.4.8              rhdf5_2.56.0           </span></span>
+<span><span class="co">#&gt; [43] pbapply_1.7-4           cachem_1.1.0            splines_4.6.0          </span></span>
+<span><span class="co">#&gt; [46] parallel_4.6.0          BiocManager_1.30.27     XVector_0.52.0         </span></span>
+<span><span class="co">#&gt; [49] aggregation_1.0.1       vctrs_0.7.3             Matrix_1.7-5           </span></span>
+<span><span class="co">#&gt; [52] jsonlite_2.0.0          multiHiCcompare_1.30.0  bookdown_0.46          </span></span>
+<span><span class="co">#&gt; [55] qqman_0.1.9             systemfonts_1.3.2       locfit_1.5-9.12        </span></span>
+<span><span class="co">#&gt; [58] limma_3.68.3            jquerylib_0.1.4         glue_1.8.1             </span></span>
+<span><span class="co">#&gt; [61] pkgdown_2.2.0           codetools_0.2-20        cowplot_1.2.0          </span></span>
+<span><span class="co">#&gt; [64] gtable_0.3.6            GenomeInfoDb_1.48.0     UCSC.utils_1.8.0       </span></span>
+<span><span class="co">#&gt; [67] tibble_3.3.1            pillar_1.11.1           rhdf5filters_1.24.0    </span></span>
+<span><span class="co">#&gt; [70] htmltools_0.5.9         GenomeInfoDbData_1.2.15 R6_2.6.1               </span></span>
+<span><span class="co">#&gt; [73] textshaping_1.0.5       evaluate_1.0.5          lattice_0.22-9         </span></span>
+<span><span class="co">#&gt; [76] pheatmap_1.0.13         bslib_0.11.0            Rcpp_1.1.1-1.1         </span></span>
+<span><span class="co">#&gt; [79] nlme_3.1-169            gridExtra_2.3           SparseArray_1.12.2     </span></span>
+<span><span class="co">#&gt; [82] mgcv_1.9-4              HiCParser_1.4.0         xfun_0.57              </span></span>
+<span><span class="co">#&gt; [85] fs_2.1.0                pkgconfig_2.0.3</span></span></code></pre></div>
+</div>
+<div class="section level2">
+<h2 class="unnumbered" id="references">References<a class="anchor" aria-label="anchor" href="#references"></a>
+</h2>
 <div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-cooler" class="csl-entry">
-Abdennur, Nezar, and Leonid A Mirny. 2019. <span>“<span class="nocase">Cooler: scalable storage for Hi-C data and other genomically labeled arrays</span>.”</span> <em>Bioinformatics</em> 36: 311–16. <a href="https://doi.org/10.1093/bioinformatics/btz540">https://doi.org/10.1093/bioinformatics/btz540</a>.
+Abdennur, Nezar, and Leonid A Mirny. 2019. <span>“<span class="nocase">Cooler: scalable storage for Hi-C data and other
+genomically labeled arrays</span>.”</span> <em>Bioinformatics</em> 36:
+311–16. <a href="https://doi.org/10.1093/bioinformatics/btz540" class="external-link">https://doi.org/10.1093/bioinformatics/btz540</a>.
 </div>
 <div id="ref-juicer" class="csl-entry">
-Durand, Muhammad S. AND Machol, Neva C. AND Shamim. 2016. <span>“<span class="nocase">Juicer Provides a One-Click System for Analyzing Loop-Resolution Hi-C Experiments</span>.”</span> <em>Cell Systems</em> 3: 95–98. <a href="https://doi.org/10.1016/j.cels.2016.07.002">https://doi.org/10.1016/j.cels.2016.07.002</a>.
+Durand, Muhammad S. AND Machol, Neva C. AND Shamim. 2016. <span>“<span class="nocase">Juicer Provides a One-Click System for Analyzing
+Loop-Resolution Hi-C Experiments</span>.”</span> <em>Cell Systems</em>
+3: 95–98. <a href="https://doi.org/10.1016/j.cels.2016.07.002" class="external-link">https://doi.org/10.1016/j.cels.2016.07.002</a>.
 </div>
 <div id="ref-kr" class="csl-entry">
-Knight, Philip A., and Daniel Ruiz. 2012. <span>“<span class="nocase">A fast algorithm for matrix balancing</span>.”</span> <em>IMA Journal of Numerical Analysis</em> 33: 1029–47. <a href="https://doi.org/10.1093/imanum/drs019">https://doi.org/10.1093/imanum/drs019</a>.
+Knight, Philip A., and Daniel Ruiz. 2012. <span>“<span class="nocase">A
+fast algorithm for matrix balancing</span>.”</span> <em>IMA Journal of
+Numerical Analysis</em> 33: 1029–47. <a href="https://doi.org/10.1093/imanum/drs019" class="external-link">https://doi.org/10.1093/imanum/drs019</a>.
 </div>
 <div id="ref-hicpro" class="csl-entry">
-Servant, Nelle AND Lajoie, Nicolas AND Varoquaux. 2015. <span>“<span class="nocase">HiC-Pro: an optimized and flexible pipeline for Hi-C data processing</span>.”</span> <em>Genome Biology</em> 16: 259. <a href="https://doi.org/10.1186/s13059-015-0831-x">https://doi.org/10.1186/s13059-015-0831-x</a>.
+Servant, Nelle AND Lajoie, Nicolas AND Varoquaux. 2015. <span>“<span class="nocase">HiC-Pro: an optimized and flexible pipeline for Hi-C data
+processing</span>.”</span> <em>Genome Biology</em> 16: 259. <a href="https://doi.org/10.1186/s13059-015-0831-x" class="external-link">https://doi.org/10.1186/s13059-015-0831-x</a>.
 </div>
 <div id="ref-multihiccompare" class="csl-entry">
-Stansfield, John C, Kellen G Cresswell, and Mikhail G Dozmorov. 2019. <span>“<span class="nocase">multiHiCcompare: joint normalization and comparative analysis of complex Hi-C experiments</span>.”</span> <em>Bioinformatics</em> 35: 2916–23. <a href="https://doi.org/10.1093/bioinformatics/btz048">https://doi.org/10.1093/bioinformatics/btz048</a>.
+Stansfield, John C, Kellen G Cresswell, and Mikhail G Dozmorov. 2019.
+<span>“<span class="nocase">multiHiCcompare: joint normalization and
+comparative analysis of complex Hi-C experiments</span>.”</span>
+<em>Bioinformatics</em> 35: 2916–23. <a href="https://doi.org/10.1093/bioinformatics/btz048" class="external-link">https://doi.org/10.1093/bioinformatics/btz048</a>.
 </div>
 <div id="ref-kmeans" class="csl-entry">
-Wagstaff, Kiri, Claire Cardie, Seth Rogers, and Stefan Schrödl. 2001. <span>“Constrained k-Means Clustering with Background Knowledge.”</span> In <em>Proceedings of the Eighteenth International Conference on Machine Learning</em>, 577–84. ICML ’01. <a href="https://pdfs.semanticscholar.org/0bac/ca0993a3f51649a6bb8dbb093fc8d8481ad4.pdf">https://pdfs.semanticscholar.org/0bac/ca0993a3f51649a6bb8dbb093fc8d8481ad4.pdf</a>.
+Wagstaff, Kiri, Claire Cardie, Seth Rogers, and Stefan Schrödl. 2001.
+<span>“Constrained k-Means Clustering with Background Knowledge.”</span>
+<em>Proceedings of the Eighteenth International Conference on Machine
+Learning</em>, ICML ’01, 577–84. <a href="https://pdfs.semanticscholar.org/0bac/ca0993a3f51649a6bb8dbb093fc8d8481ad4.pdf" class="external-link">https://pdfs.semanticscholar.org/0bac/ca0993a3f51649a6bb8dbb093fc8d8481ad4.pdf</a>.
 </div>
 </div>
 </div>
@@ -560,26 +747,28 @@ Wagstaff, Kiri, Claire Cardie, Seth Rogers, and Stefan Schrödl. 2001. <span>“
 
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
 
-        <nav id="toc" data-toggle="toc"><h2 data-toc-skip>Contents</h2>
-    </nav>
-</div>
+      </div>
 
 </div>
 
 
 
       <footer><div class="copyright">
-  <p>Developed by Kurylo Cyril, Zytnicki Matthias, Foissac Sylvain, Maigné Élise.</p>
+  <p></p>
+<p>Developed by Kurylo Cyril, Zytnicki Matthias, Foissac Sylvain, Maigné Élise.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
+  <p></p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.2.0.</p>
 </div>
 
       </footer>
 </div>
 
-  
+
+
+
 
 
   </body>

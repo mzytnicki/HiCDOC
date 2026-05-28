@@ -51,7 +51,7 @@ Runs the default filtering, normalization, and computational steps on a
 }
 \subsection{Parallel processing}{
 The parallel version of HiCDOC uses the
-\code{\link{BiocParallel}} package. Before to call the
+\pkg{BiocParallel} package. Before to call the
 function in parallel you should specify the parallel parameters such as:
     \itemize{
         \item{On Linux:}
@@ -59,7 +59,8 @@ function in parallel you should specify the parallel parameters such as:
          \item{On Windows:}
              \code{multiParam <- BiocParallel::SnowParam(workers = 10)}
     }
-    And then you can register the parameters to be used by BiocParallel: \\
+    And then you can register the parameters to be used by 
+    \pkg{BiocParallel}: \\
     \code{BiocParallel::register(multiParam, default = TRUE)}
 
     You should be aware that using MulticoreParam, reproducibility of the

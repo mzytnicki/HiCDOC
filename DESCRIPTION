@@ -17,7 +17,6 @@ Description:
     `.mcool` files, Juicer `.hic` files or HiC-Pro `.matrix` and `.bed` files.
 License: LGPL-3
 Encoding: UTF-8
-SystemRequirements: C++11
 Depends: 
     InteractionSet, GenomicRanges, SummarizedExperiment, R (>= 4.1.0)
 Imports:

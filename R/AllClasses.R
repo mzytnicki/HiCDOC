@@ -78,6 +78,7 @@ setClass(
 
 #' @rdname HiCDOCDataSet-parameters
 #' @name HiCDOCDataSet-parameters
+#' @value a list of parameters
 #' @export
 defaultHiCDOCParameters <- list(
     smallChromosomeThreshold = 0,
@@ -185,7 +186,8 @@ HiCDOCDataSetFromCool <- function(
     conditions,
     binSize = NA
 ) {
-    if(!requireNamespace('rhdf5')) stop("'rhdf5' package is required. Please install it and retry.")
+    if(!requireNamespace('rhdf5')) 
+        stop("'rhdf5' package is required. Please install it and retry.")
     if (!is.na(binSize) && (!is.numeric(binSize) || length(binSize) != 1)) {
         stop("'binSize' must be an integer.", call. = FALSE)
     }
@@ -377,7 +379,7 @@ HiCDOCDataSetFromHiCPro <- function(
 #' }
 #' \subsection{Parallel processing}{
 #' The parallel version of HiCDOC uses the
-#' \code{\pkg{BiocParallel}} package. Before to call the
+#' \pkg{BiocParallel} package. Before to call the
 #' function in parallel you should specify the parallel parameters such as:
 #'     \itemize{
 #'         \item{On Linux:}
