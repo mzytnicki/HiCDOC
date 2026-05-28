@@ -125,16 +125,8 @@ HiCDOCDataSetFromTabular <- function(
     path = NULL,
     sep = "\t"
 ) {
-
-    if (!is.character(path) || length(path) > 1) {
-        stop("'paths' must be a string of characters.", call. = FALSE)
-    }
-    if (!file.exists(path)) {
-        stop("'", path, "' does not exist.", call. = FALSE)
-    }
-
-    object <- .parseTabular(path, sep = sep)
-    object <- .fillHiCDOCDataSet(object)
+    object <- HiCParser::parseTabular(path = path, sep = sep)
+    object <- .fillHiCDOCDataSet(object, input=path)
     return(invisible(object))
 }
 
@@ -194,40 +186,16 @@ HiCDOCDataSetFromCool <- function(
     binSize = NA
 ) {
     if(!requireNamespace('rhdf5')) stop("'rhdf5' package is required. Please install it and retry.")
-    if (is.factor(paths)) {
-        paths <- as.vector(paths)
-    }
-    if (!is.character(paths)) {
-        stop("'paths' must be a vector of characters.", call. = FALSE)
-    }
-    for (path in paths) {
-        if (!file.exists(path)) {
-            stop("'", path, "' does not exist.", call. = FALSE)
-        }
-    }
-
-    if (is.factor(replicates)) {
-        conditions <- as.vector(replicates)
-    }
-    if (is.null(replicates)) {
-        stop("'replicates' must be a vector of replicates.", call. = FALSE)
-    }
-
-    if (is.factor(conditions)) {
-        conditions <- as.vector(conditions)
-    }
-    if (is.null(conditions)) {
-        stop("'conditions' must be a vector of conditions.", call. = FALSE)
-    }
-
     if (!is.na(binSize) && (!is.numeric(binSize) || length(binSize) != 1)) {
         stop("'binSize' must be an integer.", call. = FALSE)
     }
-
-    object <- new("HiCDOCDataSet")
-    object@input <- paths
-    object <- .parseCool(object, binSize, replicates, conditions)
-    object <- .fillHiCDOCDataSet(object)
+    object <- HiCParser::parseCool(
+        paths = paths, 
+        binSize = binSize, 
+        replicates = replicates, 
+        conditions = conditions
+    )
+    object <- .fillHiCDOCDataSet(object, input=paths)
     return(invisible(object))
 }
 
@@ -288,48 +256,8 @@ HiCDOCDataSetFromHiC <- function(
     conditions = NULL,
     binSize = NULL
 ) {
-
-    if (is.factor(paths)) {
-        paths <- as.vector(paths)
-    }
-    if (!is.character(paths)) {
-        stop("'paths' must be a vector of characters.", call. = FALSE)
-    }
-    for (path in paths) {
-        if (!file.exists(path)) {
-            stop("'", path, "' does not exist.", call. = FALSE)
-        }
-    }
-
-    if (is.factor(replicates)) {
-        replicates <- as.vector(replicates)
-    }
-    if (is.null(replicates)) {
-        stop("'replicates' must be a vector of replicates.", call. = FALSE)
-    }
-    if (length(replicates) != length(paths)) {
-        stop("'replicates' should have the same length as 'paths'")
-    }
-
-    if (is.factor(conditions)) {
-        conditions <- as.vector(conditions)
-    }
-    if (is.null(conditions)) {
-        stop("'conditions' must be a vector of conditions.", call. = FALSE)
-    }
-    if (length(conditions) != length(paths)) {
-        stop("'conditions' should have the same length as 'paths'")
-    }
-
-    if (!is.numeric(binSize) || length(binSize) != 1) {
-        stop("'binSize' must be an integer.", call. = FALSE)
-    }
-    binSize <- as.integer(binSize)
-
-    object <- new("HiCDOCDataSet")
-    object@input <- paths
-    object <- .parseHiC(object, binSize, replicates, conditions)
-    object <- .fillHiCDOCDataSet(object)
+    object <- HiCParser::parseHiC(paths, binSize, replicates = replicates, conditions = conditions)
+    object <- .fillHiCDOCDataSet(object, input=paths)
     return(invisible(object))
 }
 
@@ -395,64 +323,17 @@ HiCDOCDataSetFromHiCPro <- function(
     replicates = NULL,
     conditions = NULL
 ) {
-
-    if (is.factor(matrixPaths)) {
-        matrixPaths <- as.vector(matrixPaths)
-    }
-    if (!is.character(matrixPaths)) {
-        stop("'matrixPaths' must be a vector of characters.", call. = FALSE)
-    }
-
-    if (is.factor(bedPaths)) {
-        bedPaths <- as.vector(bedPaths)
-    }
-    if (!is.character(bedPaths)) {
-        stop("'bedPaths' must be a vector of characters.", call. = FALSE)
-    }
-
-    if (length(matrixPaths) != length(bedPaths)) {
-        stop(
-            "'matrixPaths' and 'bedPaths' must have the same length.",
-             call. = FALSE
-        )
-    }
-
+    object <- HiCParser::parseHiCPro(
+        matrixPaths = matrixPaths, 
+        bedPaths = bedPaths, 
+        replicates = replicates, 
+        conditions = conditions)
     paths <-
         base::split(
             base::cbind(matrixPaths, bedPaths),
             seq(length(matrixPaths))
         )
-
-    for (path in unlist(paths)) {
-        if (!file.exists(path)) {
-            stop("'", path, "' does not exist.", call. = FALSE)
-        }
-    }
-
-    if (is.factor(replicates)) {
-        replicates <- as.vector(replicates)
-    }
-    if (is.null(replicates)) {
-        stop("'replicates' must be a vector of replicates.", call. = FALSE)
-    }
-
-    if (is.factor(conditions))
-        conditions <- as.vector(conditions)
-    if (is.null(conditions)) {
-        stop("'conditions' must be a vector of conditions.", call. = FALSE)
-    }
-
-    if (length(conditions) != length(replicates)) {
-        stop(
-            "'conditions' and 'replicates' must have the same length",
-             call. = FALSE
-        )
-    }
-
-    object <- new("HiCDOCDataSet")
-    object@input <- paths
-    object <- .parseHiCPro(object, replicates, conditions)
-    object <- .fillHiCDOCDataSet(object)
+    object <- .fillHiCDOCDataSet(object, input=paths)
     return(invisible(object))
 }
 
@@ -496,7 +377,7 @@ HiCDOCDataSetFromHiCPro <- function(
 #' }
 #' \subsection{Parallel processing}{
 #' The parallel version of HiCDOC uses the
-#' \code{\link{BiocParallel}} package. Before to call the
+#' \code{\pkg{BiocParallel}} package. Before to call the
 #' function in parallel you should specify the parallel parameters such as:
 #'     \itemize{
 #'         \item{On Linux:}
@@ -504,7 +385,8 @@ HiCDOCDataSetFromHiCPro <- function(
 #'          \item{On Windows:}
 #'              \code{multiParam <- BiocParallel::SnowParam(workers = 10)}
 #'     }
-#'     And then you can register the parameters to be used by BiocParallel: \\
+#'     And then you can register the parameters to be used by 
+#'     \pkg{BiocParallel}: \\
 #'     \code{BiocParallel::register(multiParam, default = TRUE)}
 #'
 #'     You should be aware that using MulticoreParam, reproducibility of the

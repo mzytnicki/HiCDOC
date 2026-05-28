@@ -4,6 +4,7 @@
 #' @import methods
 #' @import ggplot2
 #' @import InteractionSet
+#' @import HiCParser
 #' @importFrom GenomicRanges start end distance GRanges match union
 #' @importFrom Rcpp evalCpp sourceCpp
 #' @importFrom stats loess loess.control ecdf predict median update optimize prcomp p.adjust quantile wilcox.test

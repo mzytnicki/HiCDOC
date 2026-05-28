@@ -69,15 +69,15 @@
 #' Fills parameters and slots describing the data. Called by a
 #' \code{\link{HiCDOCDataSet}} constructor.
 #'
-#' @param object
-#' A \code{\link{HiCDOCDataSet}}.
+#' @param object a \code{\link{HiCDOCDataSet}}.
+#' @param input a character vector to keep (input where the data come from).
 #'
 #' @return
 #' A filled \code{\link{HiCDOCDataSet}} ready for analysis.
 #'
 #' @keywords internal
 #' @noRd
-.fillHiCDOCDataSet <- function(object) {
+.fillHiCDOCDataSet <- function(object, input=NULL) {
     # Reduce the levels in interaction part
     object <- InteractionSet::reduceRegions(object)
     objectRegions <- InteractionSet::regions(object)
@@ -99,8 +99,9 @@
     # Sorting interactions and assay
     ids <- InteractionSet::anchors(object, id = TRUE)
     neworder <- order(chromosomes, ids$first, ids$second)
-    object <- object[neworder, ]
-
+    # Transform the object to be from class HiCDOCDataset
+    object <- new("HiCDOCDataSet", object[neworder, ])
+    
     # Fill all other slots than interactionSet part
     # Chromosomes and their size (max bin)
     object@chromosomes <- chromosomeNames
@@ -115,6 +116,7 @@
     # Weakbins
     object@weakBins <- vector("list", length(object@chromosomes))
     names(object@weakBins) <- object@chromosomes
+    object@input <- input
 
     return(object)
 }
