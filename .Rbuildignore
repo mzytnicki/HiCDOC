@@ -9,4 +9,4 @@
 ^\.claude$
 scripts
 data/example.tsv
-doc
+^doc$

@@ -78,7 +78,7 @@ setClass(
 
 #' @rdname HiCDOCDataSet-parameters
 #' @name HiCDOCDataSet-parameters
-#' @value a list of parameters
+#' @return a list of parameters
 #' @export
 defaultHiCDOCParameters <- list(
     smallChromosomeThreshold = 0,

@@ -21,6 +21,9 @@ defaultHiCDOCParameters
 \item{value}{a named list containing the names and valued of the
 parameters to change (see Details).}
 }
+\value{
+a list of parameters
+}
 \description{
 Retrieves or sets parameters used for filtering, normalization, and
 prediciton of compartments.
