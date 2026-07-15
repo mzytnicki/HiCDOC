@@ -10,7 +10,7 @@
 #' @param threshold
 #' The minimum length (number of positions) for a chromosome to be kept.
 #' Defaults to \code{object$smallChromosomeThreshold} which is originally set to
-#' \code{defaultHiCDOCParameters$smallChromosomeThreshold} = 0.
+#' \code{defaultHiCDOCParameters$smallChromosomeThreshold} = 100.
 #'
 #' @return
 #' A filtered \code{\link{HiCDOCDataSet}}.

@@ -81,7 +81,7 @@ setClass(
 #' @return a list of parameters
 #' @export
 defaultHiCDOCParameters <- list(
-    smallChromosomeThreshold = 0,
+    smallChromosomeThreshold = 100,
     sparseReplicateThreshold = 0.3,
     weakPositionThreshold = 1,
     cyclicLoessSpan = NA_real_,
@@ -438,7 +438,6 @@ HiCDOC <- function(
     object,
     parallel = FALSE
 ) {
-
     object <- filterSmallChromosomes(object)
     object <- filterSparseReplicates(object)
     object <- filterWeakPositions(object)

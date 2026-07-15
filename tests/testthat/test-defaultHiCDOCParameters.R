@@ -17,7 +17,7 @@ test_that("defaultHiCDOCParameters has the expected format", {
 })
 
 test_that("defaultHiCDOCParameters has the expected values", {
-    expect_equal(defaultHiCDOCParameters$smallChromosomeThreshold, 0)
+    expect_equal(defaultHiCDOCParameters$smallChromosomeThreshold, 100)
     expect_equal(defaultHiCDOCParameters$weakPositionThreshold, 1)
     expect_equal(defaultHiCDOCParameters$sparseReplicateThreshold, 0.3)
     expect_equal(defaultHiCDOCParameters$cyclicLoessSpan, NA_real_)
