@@ -50,7 +50,7 @@ for details on how these parameters are used.
             The minimum length (number of positions) for a chromosome to be
             kept when filtering with \code{\link{filterSmallChromosomes}}.
             Defaults to
-            \code{defaultHiCDOCParameters$smallChromosomeThreshold} = 0.
+            \code{defaultHiCDOCParameters$smallChromosomeThreshold} = 100.
         }
         \item{\code{sparseReplicateThreshold}}{
             The minimum percentage of non-zero interactions for a chromosome
